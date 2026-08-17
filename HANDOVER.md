@@ -17,9 +17,10 @@ procurement/purchase decision-makers at Bengaluru real-estate developers and civ
 | Weekly routine | **Active** — fires Mondays 09:00 IST, fresh session each run (`trig_01VNyxSiboYsDLyXFMfHS1pt`) |
 | Sales Outreach Sequence | **PAUSED** (`manual_pause`, since 2026-08-05) — ~100 contacts frozen mid-flight |
 | Contacts in Apollo | 404 total |
-| Credits remaining | 2,783 (as of 2026-08-17) |
+| Credits remaining | Lead **2,741**; **direct-dial 0** (exhausted, resets 2026-08-22) |
 | Week-4 run (2026-08-10) | **Held** after filtering — 1 credit spent, nothing saved |
 | Week-5 run (2026-08-17) | **Held** — 0 credits spent, blocker unchanged |
+| Week-6 run (2026-08-17, manual) | **Completed** — 35 saved, 37 credits, nothing enrolled |
 
 ### ⛔ Uncarried instruction — read this first
 On 2026-08-17 Taarun typed **"Run Sequence"** and then interrupted before it executed.
@@ -42,9 +43,10 @@ Do not guess these — all confirmed from live tool responses.
 ### Lists (labels, modality = contacts)
 | Name | ID | Count |
 |---|---|---|
-| Builders in Bengaluru | `6a607ee13dbb2e0018c328f3` | 129 |
+| Builders in Bengaluru | `6a607ee13dbb2e0018c328f3` | 178 |
 | Builders in Mysore | `6a72b5f101ce1c00109eb9d7` | 6 |
 | Builders - Karnataka Tier 2 | `6a72b82ffe136b0010a66783` | 2 |
+| Fitout & Interiors - Bengaluru | `6a82b1893374bd0010197047` | 2 |
 
 ### Accounts / people
 | Thing | ID |
@@ -126,11 +128,13 @@ addresses. ~16% of dialled numbers were bad — verify the number before writing
 
 **Never cold-pitch a company President TMT already supplies.**
 
-**Source file:** `/root/.claude/uploads/7d9ffde2-66ec-5020-84c1-354d37af72ed/fb901155-Active_Clients_List.xlsx`
-sheet `TMT BARS`, column B = client name, column C = qty (MT). 198 clients, 1 Apr – 28 Jul 2026.
+**Source file:** `data/active_clients.csv` in this repo — 198 clients, columns `client_name` and
+`qty_mt`, covering 1 Apr – 28 Jul 2026. Exported from Taarun's `Active_Clients_List.xlsx`
+(sheet `TMT BARS`) on 2026-08-17 because the original upload path was session-scoped and a fresh
+session cannot read it.
 
-> This upload path is session-scoped. **If the file is missing, ask Taarun to re-send it before
-> enrolling anyone** — do not silently skip the check.
+> **If `data/active_clients.csv` is missing, do not enrich or enroll** — ask Taarun to re-send the
+> spreadsheet. Do not silently skip the check.
 
 ### Confirmed client matches found so far
 | Company | Tonnage | Notes |
@@ -140,6 +144,7 @@ sheet `TMT BARS`, column B = client name, column C = qty (MT). 198 clients, 1 Ap
 | Nambiar Builders (+ Enterprises LLP, Ensemble Residential) | 315.50 + 38.41 + 12.38 MT | Group entities |
 | KNS Industries / KNS Group | 36.38 MT | Matched via `@knsgroup.in` domain |
 | Ravi Infrabuild Projects Limited | 3.94 MT | Caught during Belgaum run |
+| Ramsons Trendsquares Realty LLP | — | Caught week 6; removed 2 director contacts |
 
 ### Also permanently excluded (user instruction 2026-08-03 — not on the client list)
 Prestige Group · Sumadhura Infracon · Modern Spaaces · DivyaSree Developers
@@ -176,9 +181,12 @@ numbers on the Mysore list for manual calling.
 | Karnataka Tier 2 | Aug 5 | — | 4 | 2 | 0 | 12 |
 | Week 4 | Aug 10 | 3 | — | — | — | 1 (held) |
 | Week 5 | Aug 17 | — | — | — | — | 0 (held) |
+| Week 6 | Aug 17 | A p4 + B p1 | 35 | 35 | 0 (banked) | 37 |
 
-**Page rotation:** advance `page` each week. Pages 1–3 are mined out. **Week 6 should start at
-page 4.**
+**Search A (procurement titles) is exhausted** — its whole pool was 361 records and pages 1–4
+consumed all of it. From week 6 the active search is **Search B** (director/founder titles at
+15–24 employee firms, pool 375). Page 1 used; **week 7 starts at Search B page 2.** Exact
+parameters are in `RUNBOOK.md` §1.
 
 ---
 
@@ -200,6 +208,15 @@ page 4.**
    `tool-results/*.txt`. Parse them with a script rather than reading them.
 7. **Filtered-but-unenriched candidates do not persist.** They live only in session context. If a
    run is held at the enrichment gate, the search must be re-run (1 credit) to recover them.
+8. **`label_names` on a contact object in `apollo_contacts_bulk_create` is silently ignored.**
+   Contacts come back with `label_ids: []`. The separate
+   `apollo_labels_add_entity_ids_to_label_names` call is mandatory — check `cached_count` moved.
+9. **Direct-dial credits are a separate, much smaller pool than lead credits** and they run out
+   first. Check `direct_dial_credit.left_over` before setting `reveal_phone_number: true`; it
+   was zero on 2026-08-17 with 2,741 lead credits still available.
+10. **Founder/director titles at small firms beat procurement titles for this market.** Small
+    Bengaluru developers are run by their founders, and the procurement-title search mostly
+    surfaced IT and manufacturing staff. Search B ran ~40% relevant vs Search A's 10% by page 4.
 
 ---
 

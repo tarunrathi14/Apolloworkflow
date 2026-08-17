@@ -1,8 +1,25 @@
 {
   "_comment": "Mutable state for the weekly Apollo outbound run. Each run reads this, then commits an updated copy back to the branch so the next fresh session picks up where this one left off.",
-  "next_search_page": 4,
-  "pages_used": [1, 1, 2, 3],
+
+  "_searches": "Search A (procurement titles, 15+ employees) is EXHAUSTED - its pool was only 361 records and pages 1-4 consumed all of them. Do not run it again. Search B (director/founder titles at 15-24 employee firms) is the active search from 2026-08-17; pool is 375 and page 1 is used.",
+
+  "search_a_procurement_titles": {
+    "status": "exhausted",
+    "total_pool": 361,
+    "pages_used": [1, 1, 2, 3, 4],
+    "next_search_page": null
+  },
+  "search_b_directors_small_firms": {
+    "status": "active",
+    "total_pool": 375,
+    "pages_used": [1],
+    "next_search_page": 2
+  },
+
+  "next_search_page": 2,
   "last_run_date": "2026-08-17",
-  "last_run_outcome": "held - sequence paused, 0 credits",
-  "sequence_paused_since": "2026-08-05"
+  "last_run_outcome": "35 saved to Builders in Bengaluru + 2 to Fitout list; 37 lead credits; no phones (direct-dial pool empty); nothing enrolled",
+  "sequence_paused_since": "2026-08-05",
+  "direct_dial_credits_exhausted": true,
+  "credit_cycle_resets": "2026-08-22"
 }

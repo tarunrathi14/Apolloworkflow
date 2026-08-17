@@ -34,25 +34,37 @@ Everything below depends on files on that branch.
 `data/run_state.json` → `next_search_page`. Use that as the `page` parameter.
 
 ### 1. Search
-`apollo_mixed_people_api_search`, 1 credit per request, max 2 requests:
+`apollo_mixed_people_api_search`, 1 credit per request, max 2 requests.
+
+**Search A — procurement titles. EXHAUSTED as of 2026-08-17. Do not run it.**
+Its entire pool was 361 records and pages 1–4 consumed all of them. Kept here only for reference:
 
 - `person_titles`: purchase manager, procurement head, procurement manager, purchase head,
   head of procurement, purchasing manager, sourcing manager, materials manager,
   procurement officer, purchase executive
-- `include_similar_titles`: true
+- `include_similar_titles`: true, `contact_email_status`: `["verified"]`,
+  `organization_num_employees_ranges`: `["15,10000000"]`
+
+**Search B — directors at small firms. This is the active search.** Pool 375, page 1 used.
+
+- `person_titles`: director, managing director, founder, proprietor, partner, owner
+- `include_similar_titles`: **false** (true drags in every VP and associate)
 - `person_locations`: `["Bengaluru, India"]`
 - `organization_locations`: `["Bengaluru, India"]`
 - `contact_email_status`: `["verified"]`
-- `organization_num_employees_ranges`: `["15,10000000"]`
+- `organization_num_employees_ranges`: `["15,24"]`
 - `q_organization_keyword_tags`: real estate development, real estate contractors, construction,
   building construction, residential building construction, nonresidential building construction,
-  highway/street/bridge construction, real estate, commercial real estate, building equipment
-  contractors, building structure and exterior contractors, building finishing contractors
+  real estate, commercial real estate
 - `per_page`: 100
-- `page`: from `run_state.json`
+- `page`: `search_b_directors_small_firms.next_search_page` from `run_state.json`
 
-If fewer than 50 net-new survive filtering, run a second request for directors at 15–24 employee
-companies.
+Search B is far higher quality than A ever was — roughly 40% relevant vs 10% on A's last page,
+because small developer firms are run by their founders and A's title list mostly matched
+procurement staff at IT companies and component manufacturers.
+
+When Search B is also exhausted (after ~page 4), the search needs widening — raise the employee
+ceiling above 24, or extend `person_locations` beyond Bengaluru. Flag it rather than guessing.
 
 ### 2. Review — four filters, all of them
 
@@ -95,10 +107,18 @@ Keep them in a separate group; they are **not** part of the default set.
 Rank by seniority (Heads/GMs > Managers > Executives) and take the top 50, fewer if fewer exist.
 
 ### 3. Enrich
-`apollo_people_bulk_match`, batches of 10, `reveal_phone_number: true`.
-Poll `apollo_webhook_result_show` with each top-level `request_id`.
+`apollo_people_bulk_match`, batches of 10.
 
-- Cost: 1 credit per email match, **~8 credits per revealed phone**. A 50-person run is ~275–300.
+⚠️ **Check `direct_dial_credit` in `apollo_usage_stats_credit_usage_stats` before setting
+`reveal_phone_number: true`.** It hit zero on 2026-08-17 and the pool only refills at the cycle
+reset. With no direct-dial credits, set `reveal_phone_number: false` — enrich emails, save the
+leads, and note in the summary that phones still need revealing once credits return.
+
+With phones available: `reveal_phone_number: true`, then poll `apollo_webhook_result_show` with
+each top-level `request_id`.
+
+- Cost: 1 credit per email match, **~8 credits per revealed phone**. A 50-person run is ~275–300
+  with phones, ~50 without.
 - Drop anyone whose email comes back `unavailable`.
 - ⚠️ Apollo may report `email_status: "verified"` while also setting
   `extrapolated_email_confidence`. That means the address is a **guess**. Exclude those from the
@@ -107,7 +127,13 @@ Poll `apollo_webhook_result_show` with each top-level `request_id`.
 ### 4. Save
 `apollo_contacts_bulk_create` with all enriched fields, then
 `apollo_labels_add_entity_ids_to_label_names` → list **"Builders in Bengaluru"**
-(`6a607ee13dbb2e0018c328f3`).
+(`6a607ee13dbb2e0018c328f3`). Weak-fit fitout/coworking people go to
+**"Fitout & Interiors - Bengaluru"** (`6a82b1893374bd0010197047`) instead.
+
+⚠️ The `label_names` field on a contact object in `apollo_contacts_bulk_create` is silently
+ignored — contacts come back with `label_ids: []`. You **must** make the separate
+`apollo_labels_add_entity_ids_to_label_names` call, using the contact ids from the create
+response. Verify the returned `cached_count` went up.
 
 ### 5. STOP — do not enroll
 
@@ -119,12 +145,12 @@ If the **Sales Outreach Sequence** (`6a6080c3ab6e0e0020a91ae2`) is paused, that 
 gather and save the leads anyway, and say so in the summary.
 
 ### 6. Update state and commit
-Set `next_search_page` to the next unused page, append to `pages_used`, update `last_run_date`
-and `last_run_outcome` in `data/run_state.json`, then commit and push to
+Advance `search_b_directors_small_firms.next_search_page`, append to its `pages_used`, update
+`last_run_date` and `last_run_outcome` in `data/run_state.json`, then commit and push to
 `claude/monday-outbound-workflow-eops28`.
 
-Pages 1–3 are mined out. Quality degrades sharply by page — page 1 was ~85% relevant, page 3 ~35%.
-If a page yields almost nothing usable, say so; the search may need widening.
+Quality degrades sharply by page. On Search A: page 1 ~85% relevant, page 3 ~35%, page 4 ~10%.
+If a page yields almost nothing usable, say so; the search needs widening.
 
 ---
 
