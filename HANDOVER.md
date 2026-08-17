@@ -14,7 +14,7 @@ procurement/purchase decision-makers at Bengaluru real-estate developers and civ
 
 | Thing | Status |
 |---|---|
-| Weekly routine | **Active** — fires Mondays 09:00 IST |
+| Weekly routine | **Active** — fires Mondays 09:00 IST, fresh session each run (`trig_01VNyxSiboYsDLyXFMfHS1pt`) |
 | Sales Outreach Sequence | **PAUSED** (`manual_pause`, since 2026-08-05) — ~100 contacts frozen mid-flight |
 | Contacts in Apollo | 404 total |
 | Credits remaining | 2,783 (as of 2026-08-17) |
@@ -58,9 +58,25 @@ Do not guess these — all confirmed from live tool responses.
 flagged `default: true`. Auto-selecting "the default mailbox" picks the wrong one. Pin the ID.
 
 ### Scheduled routine
-- Trigger ID: `trig_018sFLckhL9PvSv1F3t4e7PY`
-- Cron: `30 3 * * 1` (UTC) = **Mondays 09:00 IST**
-- Fires into this persistent session; full run instructions live in the trigger prompt.
+
+Changed 2026-08-17 from one long-running session to **a fresh session per firing**, at Taarun's
+request. The run procedure now lives in `RUNBOOK.md` in this repo, not in the trigger prompt.
+
+| Routine | ID | Cron | State |
+|---|---|---|---|
+| Claude's Monday workflow (fresh session) | `trig_01VNyxSiboYsDLyXFMfHS1pt` | `30 3 * * 1` UTC = Mon 09:00 IST | **active** — `create_new_session_on_fire: true`, push + email notifications |
+| Claude's Monday workflow (OLD — self-bind) | `trig_018sFLckhL9PvSv1F3t4e7PY` | same | **disabled**, kept for reference |
+
+⚠️ **The new Routine stores no MCP connectors.** The API rejects the `connectors` parameter for
+this organisation, so a fired session may start **without Apollo tools**. Taarun must attach the
+**Apollo.io** connector to the Routine from the claude.ai Routines UI. Until that is confirmed,
+the first fresh run may stop at its precondition check and report the connector as missing —
+that is the designed failure, not a bug.
+
+Fresh sessions cannot read session-scoped uploads, so the client list was exported to
+`data/active_clients.csv` (198 rows) and page rotation moved to `data/run_state.json`.
+
+Unattended runs **bank leads only** — they never enroll anyone in a sequence.
 
 ---
 
@@ -229,7 +245,7 @@ Pick one and instruct:
 
 ## 10. Weekly workflow definition
 
-Authoritative version lives in the trigger prompt (`trig_018sFLckhL9PvSv1F3t4e7PY`). Summary:
+Authoritative version is **`RUNBOOK.md` in this repo** (since 2026-08-17). Summary:
 
 1. **Search** — `apollo_mixed_people_api_search`, procurement/purchase titles, Bengaluru (both
    person and org location), verified email only, 15+ employees, real-estate/construction keyword
