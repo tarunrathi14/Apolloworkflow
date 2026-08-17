@@ -1,0 +1,8 @@
+{
+  "_comment": "Mutable state for the weekly Apollo outbound run. Each run reads this, then commits an updated copy back to the branch so the next fresh session picks up where this one left off.",
+  "next_search_page": 4,
+  "pages_used": [1, 1, 2, 3],
+  "last_run_date": "2026-08-17",
+  "last_run_outcome": "held - sequence paused, 0 credits",
+  "sequence_paused_since": "2026-08-05"
+}
