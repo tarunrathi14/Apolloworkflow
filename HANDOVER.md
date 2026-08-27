@@ -15,12 +15,14 @@ procurement/purchase decision-makers at Bengaluru real-estate developers and civ
 | Thing | Status |
 |---|---|
 | Weekly routine | **Active** — fires Mondays 09:00 IST, fresh session each run (`trig_01VNyxSiboYsDLyXFMfHS1pt`) |
-| Sales Outreach Sequence | **PAUSED** (`manual_pause`, since 2026-08-05) — ~100 contacts frozen mid-flight |
+| Sales Outreach Sequence | **ACTIVE** — rebuilt to 4 steps (LinkedIn + 3 calls, **no email steps**), `manual_approve` |
 | Contacts in Apollo | 404 total |
 | Credits remaining | Lead **2,741**; **direct-dial 0** (exhausted, resets 2026-08-22) |
 | Week-4 run (2026-08-10) | **Held** after filtering — 1 credit spent, nothing saved |
 | Week-5 run (2026-08-17) | **Held** — 0 credits spent, blocker unchanged |
-| Week-6 run (2026-08-17, manual) | **Completed** — 35 saved, 37 credits, nothing enrolled |
+| Week-6 run (2026-08-17) | **Completed** — 35 saved, 37 credits, nothing enrolled |
+| Week-7 run (2026-08-27) | **Completed** — 2 more saved, **35 enrolled active**, 45 credits |
+| ⛔ Blocker | **No phone numbers on any of the 35** — sequence is 3/4 calls, direct-dial credits at 0 |
 
 ### ⛔ Uncarried instruction — read this first
 On 2026-08-17 Taarun typed **"Run Sequence"** and then interrupted before it executed.
@@ -37,7 +39,8 @@ Do not guess these — all confirmed from live tool responses.
 ### Sequences
 | Name | ID | State |
 |---|---|---|
-| Sales Outreach Sequence | `6a6080c3ab6e0e0020a91ae2` | inactive (`manual_pause`) |
+| **Sales Outreach Sequence** | `6a6080c3ab6e0e0020a91ae2` | **active** — the live one. Owned by `695f80e866efc30021e7432b` (Taarun) |
+| Sales Outreach Sequence — President TMT (sales@) | `6a82bbf590e9250010cb9162` | inactive, 0 contacts — a clone created 2026-08-17 under the **sales@** user. 7 steps incl. 3 emails. **Do not enroll here.** |
 | Call First Outreach — Bengaluru Builders | `6a72b817fe136b0010a6673f` | inactive — draft/rollback copy, now redundant |
 
 ### Lists (labels, modality = contacts)
@@ -53,11 +56,18 @@ Do not guess these — all confirmed from live tool responses.
 |---|---|
 | User (Taarun) | `695f80e866efc30021e7432b` |
 | Team | `695f80e766efc30021e74214` |
-| **Sender mailbox — use this** | `695f80e766efc30021e74213` (taarun@stscl.co.in) |
-| ⛔ Do NOT use | `6a69b227fee0210020921a3e` (sales@presidenttmt.com) |
+| ⚠️ Only linked mailbox | `6a69b227fee0210020921a3e` (sales@presidenttmt.com) |
+| ❌ No longer linked | `695f80e766efc30021e74213` (taarun@stscl.co.in) |
 
-`sales@presidenttmt.com` belongs to a **different user** (`6a69aeacac48380010f23ccc`) and is also
-flagged `default: true`. Auto-selecting "the default mailbox" picks the wrong one. Pin the ID.
+**Changed 2026-08-27.** `taarun@stscl.co.in` has been **unlinked from Apollo** —
+`apollo_email_accounts_index` now returns exactly one account, `sales@presidenttmt.com`, owned by a
+different user (`6a69aeacac48380010f23ccc`) and flagged `default: true`.
+
+The old rule was "never send from sales@". That is currently **impossible to honour**, because it is
+the only mailbox available. It is survivable only because the live sequence has **no email steps** —
+`send_email_from_email_account_id` is a required parameter but nothing ever sends through it.
+**If any email step is added back to the sequence, this becomes a live problem:** relink
+taarun@stscl.co.in first, or mail will go out under the wrong identity.
 
 ### Scheduled routine
 
@@ -182,6 +192,12 @@ numbers on the Mysore list for manual calling.
 | Week 4 | Aug 10 | 3 | — | — | — | 1 (held) |
 | Week 5 | Aug 17 | — | — | — | — | 0 (held) |
 | Week 6 | Aug 17 | A p4 + B p1 | 35 | 35 | 0 (banked) | 37 |
+| Week 7 | Aug 27 | B p2 | 8 | 2 | **35 (all active)** | 8 |
+
+**Search B is degrading fast.** Page 1 gave 33 usable of 100; page 2 gave **2 of 100** — the
+keyword tags pull in law firms, fintech and property brokerages that merely mention "real estate".
+Widen the search before or during page 3: raise the employee ceiling above 24, or drop the broad
+`real estate` / `commercial real estate` tags in favour of construction-only tags.
 
 **Search A (procurement titles) is exhausted** — its whole pool was 361 records and pages 1–4
 consumed all of it. From week 6 the active search is **Search B** (director/founder titles at
@@ -217,6 +233,13 @@ parameters are in `RUNBOOK.md` §1.
 10. **Founder/director titles at small firms beat procurement titles for this market.** Small
     Bengaluru developers are run by their founders, and the procurement-title search mostly
     surfaced IT and manufacturing staff. Search B ran ~40% relevant vs Search A's 10% by page 4.
+11. **The broad `real estate` keyword tag is a trap on later pages.** It matches law firms,
+    proptech, brokerages, land-advisory and VR-visualisation studios — none of which buy rebar.
+    Enrich before judging: the org's `industry` and `keywords` fields settle it for ~1 credit.
+12. **Apollo state drifts between runs — re-read it, never trust the handover for live state.**
+    On 2026-08-27 the sequence turned out to be active (not paused), rebuilt from 8 steps to 4
+    with no email steps, and Taarun's mailbox had been unlinked entirely. All three contradicted
+    what was written here a week earlier.
 
 ---
 
