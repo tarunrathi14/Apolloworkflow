@@ -34,37 +34,32 @@ Everything below depends on files on that branch.
 `data/run_state.json` → `next_search_page`. Use that as the `page` parameter.
 
 ### 1. Search
-`apollo_mixed_people_api_search`, 1 credit per request, max 2 requests.
+`apollo_mixed_people_api_search`, 1 credit per request.
 
-**Search A — procurement titles. EXHAUSTED as of 2026-08-17. Do not run it.**
-Its entire pool was 361 records and pages 1–4 consumed all of them. Kept here only for reference:
-
-- `person_titles`: purchase manager, procurement head, procurement manager, purchase head,
-  head of procurement, purchasing manager, sourcing manager, materials manager,
-  procurement officer, purchase executive
-- `include_similar_titles`: true, `contact_email_status`: `["verified"]`,
-  `organization_num_employees_ranges`: `["15,10000000"]`
-
-**Search B — directors at small firms. This is the active search.** Pool 375, page 1 used.
+**Search C — directors at mid-size construction firms. THIS IS THE ACTIVE SEARCH** (opened
+2026-09-07). Pool 1,077 — far larger and cleaner than anything before it. Page 1 yielded 53 saved.
 
 - `person_titles`: director, managing director, founder, proprietor, partner, owner
-- `include_similar_titles`: **false** (true drags in every VP and associate)
+- `include_similar_titles`: **false**
 - `person_locations`: `["Bengaluru, India"]`
 - `organization_locations`: `["Bengaluru, India"]`
 - `contact_email_status`: `["verified"]`
-- `organization_num_employees_ranges`: `["15,24"]`
+- `organization_num_employees_ranges`: `["25,200"]`
 - `q_organization_keyword_tags`: real estate development, real estate contractors, construction,
-  building construction, residential building construction, nonresidential building construction,
-  real estate, commercial real estate
-- `per_page`: 100
-- `page`: `search_b_directors_small_firms.next_search_page` from `run_state.json`
+  building construction, residential building construction, nonresidential building construction
+- `per_page`: 100, `page`: `search_c_directors_25_200.next_search_page` from `run_state.json`
 
-Search B is far higher quality than A ever was — roughly 40% relevant vs 10% on A's last page,
-because small developer firms are run by their founders and A's title list mostly matched
-procurement staff at IT companies and component manufacturers.
+⚠️ **Do not add the bare `real estate` or `commercial real estate` tags.** They are what wrecked
+Search B — they match law firms, fintech, proptech and brokerages that merely mention property.
+Construction-only tags are the whole reason Search C works.
 
-When Search B is also exhausted (after ~page 4), the search needs widening — raise the employee
-ceiling above 24, or extend `person_locations` beyond Bengaluru. Flag it rather than guessing.
+**Search A (procurement titles, 15+ employees) — EXHAUSTED.** Pool was 361; pages 1–4 used it up.
+**Search B (director titles, 15–24 employees) — worked out.** Page 1 gave 33 of 100, page 2 gave 2
+of 100. Its `next_search_page` is 3 if ever needed, but prefer Search C.
+
+Founder/director titles beat procurement titles in this market: small and mid-size Bengaluru
+developers are run by their founders, while procurement-title searches surface IT and
+manufacturing staff.
 
 ### 2. Review — four filters, all of them
 
@@ -74,7 +69,9 @@ Ashirvad, First American, Geberit, Emmvee, L&T Construction Equipment (the *equi
 Zuari Cement.
 
 **b. Net-new only.** Page through `apollo_contacts_search` and collect every `person_id`. Exclude
-anyone already saved. (~404 contacts as of 2026-08-17, 5 pages at `per_page: 100`.)
+anyone already saved. (576 contacts as of 2026-09-07 — **6 pages** at `per_page: 100`; keep paging
+until a page returns fewer than 100.) Note a company already appearing in the base does not mean
+the person does — dedupe on `person_id`, not company name.
 
 **c. Client exclusion — never cold-pitch an existing customer.**
 Read `data/active_clients.csv` (198 rows, `client_name`, `qty_mt`). Match on **company name and
@@ -88,6 +85,10 @@ Known client groups — exclude all entities:
 | Nambiar | "Nambiar Builders", "NAMBIAR ENTERPRISES LLP", "NAMBIAR ENSEMBLE…" |
 | KNS | "KNS Industries", "KNS Infrastructure" (domain `knsgroup.in`) |
 | Ravi Infrabuild | "RAVI INFRABUILD PROJECTS LIMITED" |
+| Ramsons | "RAMSONS TRENDSQUARES REALTY LLP" |
+| SNN | "SNN BUILDERS", "SNN PROPERTIES LLP", "SNN SPIRITUA DEVELOPERS" — also SNN Estates, SNN Raj Corp (~539 MT) |
+| Ruchira | "RUCHIRA DEVELOPERS LLP" — also Ruchira Projects |
+| Elegant | "ELEGANT BUILDERS AND DEVELOPERS", "ELEGANT ALTIMA", "ELEGANT ATMOS" (~558 MT) |
 
 Also permanently excluded by user instruction (2026-08-03), though not on the client list:
 **Prestige Group · Sumadhura Infracon · Modern Spaaces · DivyaSree Developers**
@@ -97,6 +98,8 @@ Known false positives — do **not** exclude these:
 - Gopalan Enterprises ≠ "GOPALA NARAYANA RAO" (a person)
 - Embassy Group vs "EMBASSY MARBLE & CEMENT COMPANY" — unresolved; treat as **not** a client
   and flag it in the summary.
+- Durga Projects & Infrastructure ≠ "SRI DURGA TRADERS" (a trader, different firm)
+- Disha Habitat ≠ "ADISHAKTI SMELTERS" (substring artefact — "DISHA" inside "ADISHAKTI")
 
 **d. Fit.** Structural builders, developers and civil contractors are the target — they buy TMT
 rebar. Coworking operators and interior-fitout firms are weak fits: WeWork, IndiQube, BHIVE,
@@ -137,20 +140,27 @@ response. Verify the returned `cached_count` went up.
 
 ### 5. STOP — do not enroll
 
-> ⛔ **This run must never add anyone to a sequence.**
-> Decided with Taarun on 2026-08-17: unattended runs bank leads only. Enrollment is a manual
-> decision he makes in Apollo after reviewing.
+> ⛔ **An unattended run must never add anyone to a sequence.**
+> Decided with Taarun on 2026-08-17: the scheduled Monday run banks leads only. Enrollment is a
+> decision he makes explicitly.
 
-If the **Sales Outreach Sequence** (`6a6080c3ab6e0e0020a91ae2`) is paused, that is expected —
-gather and save the leads anyway, and say so in the summary.
+This applies to the **fresh-session Routine**. When Taarun is present and explicitly says to
+enroll, do it — that is the fresh approval the gate exists for. He has done so twice
+(2026-08-27, 2026-09-07).
+
+To enroll: re-resolve the sequence with `apollo_emailer_campaigns_search` and the mailbox with
+`apollo_email_accounts_index` **in the same session** — both have changed underneath us before —
+then `apollo_emailer_campaigns_add_contact_ids` with `status: "active"` and
+`sequence_same_company_in_same_campaign: true` (many of these firms yield 2–4 contacts each).
 
 ### 6. Update state and commit
-Advance `search_b_directors_small_firms.next_search_page`, append to its `pages_used`, update
-`last_run_date` and `last_run_outcome` in `data/run_state.json`, then commit and push to
-`claude/monday-outbound-workflow-eops28`.
+Advance `search_c_directors_25_200.next_search_page`, append to its `pages_used`, record the
+page's yield in `yield_by_page`, update `last_run_date` and `last_run_outcome` in
+`data/run_state.json`, then commit and push to `claude/monday-outbound-workflow-eops28`.
 
-Quality degrades sharply by page. On Search A: page 1 ~85% relevant, page 3 ~35%, page 4 ~10%.
-If a page yields almost nothing usable, say so; the search needs widening.
+Quality degrades by page within a search. Search A: page 1 ~85% relevant, page 3 ~35%, page 4 ~10%.
+Search B: page 1 33%, page 2 2%. When a page yields almost nothing, don't grind the next one —
+change the filters (size band or keyword tags) as Search C did.
 
 ---
 

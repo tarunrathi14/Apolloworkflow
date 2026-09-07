@@ -1,26 +1,35 @@
 {
   "_comment": "Mutable state for the weekly Apollo outbound run. Each run reads this, then commits an updated copy back to the branch so the next fresh session picks up where this one left off.",
 
-  "_searches": "Search A (procurement titles, 15+ employees) is EXHAUSTED - its pool was only 361 records and pages 1-4 consumed all of them. Do not run it again. Search B (director/founder titles at 15-24 employee firms) is active but degrading fast: page 1 yielded 33 usable, page 2 yielded only 2 of 8 enriched. Expect to widen the search after page 3.",
+  "_searches": "Searches A and B are worked out. Search C (director/founder titles at 25-200 employee firms, construction-only tags) opened 2026-09-07 and is by far the best seam found: pool 1,077 and page 1 alone yielded 53 saved. Continue on Search C page 2.",
 
   "search_a_procurement_titles": {
     "status": "exhausted",
-    "total_pool": 361,
+    "note": "pool was only 361; pages 1-4 consumed all of it",
     "pages_used": [1, 1, 2, 3, 4],
     "next_search_page": null
   },
-  "search_b_directors_small_firms": {
-    "status": "active - degrading",
+  "search_b_directors_15_24": {
+    "status": "worked out",
+    "note": "page 1 gave 33 saved of 100; page 2 gave 2 of 100 - broad 'real estate' tag pulls in law firms, fintech, brokerages",
     "total_pool": 386,
     "pages_used": [1, 2],
-    "next_search_page": 3,
-    "yield_by_page": { "1": "33 saved of 100", "2": "2 saved of 100" }
+    "next_search_page": 3
+  },
+  "search_c_directors_25_200": {
+    "status": "active - best performing",
+    "note": "person_titles director/managing director/founder/proprietor/partner/owner, include_similar_titles false, org employees 25-200, construction-only keyword tags (no bare 'real estate' or 'commercial real estate'). See RUNBOOK.md section 1.",
+    "total_pool": 1077,
+    "pages_used": [1],
+    "next_search_page": 2,
+    "yield_by_page": { "1": "53 saved of 100" }
   },
 
-  "next_search_page": 3,
-  "last_run_date": "2026-08-27",
-  "last_run_outcome": "35 saved and ENROLLED active in Sales Outreach Sequence; 45 lead credits; still no phone numbers",
-  "sequence_state": "ACTIVE as of 2026-08-27 - 4 steps, all LinkedIn/call, no email steps",
+  "next_search_page": 2,
+  "active_search": "search_c_directors_25_200",
+  "last_run_date": "2026-09-07",
+  "last_run_outcome": "53 saved and ENROLLED active in Sales Outreach Sequence; 58 lead credits; still no phone numbers",
+  "sequence_state": "ACTIVE - 4 steps, LinkedIn + 3 calls, no email steps",
   "direct_dial_credits_exhausted": true,
-  "phones_still_needed_for": 35
+  "phones_still_needed_for": 88
 }
