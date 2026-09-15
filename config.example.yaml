@@ -1,0 +1,41 @@
+# Copy to config.yaml and edit. This file is the assistant's model of how you
+# work — the planner and conflict engine read nothing else about you.
+
+timezone: Asia/Kolkata
+calendar_id: primary
+telegram_chat_id: "123456789"   # /start the bot, then read it from getUpdates
+
+working_hours:
+  start: "09:00"
+  end: "19:00"
+
+# Windows that must stay unbooked. A meeting landing here is a conflict, and
+# the planner reserves them for DEEP tasks only — shallow work cannot eat them.
+deep_work:
+  - label: Morning maker time
+    start: "09:00"
+    end: "11:00"
+    weekdays: [mon, tue, wed, thu, fri]
+  - label: Friday planning
+    start: "15:00"
+    end: "17:00"
+    weekdays: [fri]
+
+travel:
+  default_minutes: 30      # used for any pair of places not listed below
+  buffer_minutes: 5        # padding around every in-person event
+  routes:
+    - from: Home
+      to: Office
+      minutes: 30
+    - from: Office
+      to: Client HQ
+      minutes: 45
+    - from: Home
+      to: Airport
+      minutes: 75
+  # Anything matching these costs no travel time.
+  virtual_locations: [zoom, meet, google meet, teams, phone, call, online, remote]
+
+planning:
+  min_task_slot_minutes: 15   # shorter tasks get batched, not booked
