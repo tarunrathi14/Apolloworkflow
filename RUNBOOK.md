@@ -37,7 +37,8 @@ Everything below depends on files on that branch.
 `apollo_mixed_people_api_search`, 1 credit per request.
 
 **Search C — directors at mid-size construction firms. THIS IS THE ACTIVE SEARCH** (opened
-2026-09-07). Pool 1,077 — far larger and cleaner than anything before it. Page 1 yielded 53 saved.
+2026-09-07). Pool ~1,095. Page 1 yielded 53 saved, page 2 yielded 22 — still the best seam the
+project has had, but decaying. Plan to widen again around page 4.
 
 - `person_titles`: director, managing director, founder, proprietor, partner, owner
 - `include_similar_titles`: **false**
@@ -68,9 +69,22 @@ Wipro, Infosys, Bosch, ZETWERK, AJAX Engineering, Schneider, BEML, Asian Paints,
 Ashirvad, First American, Geberit, Emmvee, L&T Construction Equipment (the *equipment* arm),
 Zuari Cement.
 
+⛔ **Competitors and steel suppliers — never enroll.** Search C surfaces these because they carry
+construction tags: **A-One Steels India** (TMT producer), **Ranka Steels** (`@rankasteels.com`),
+Minox Metal, Mahesh Hardware and Pipes. Also drop material suppliers who sell *to* builders rather
+than buy rebar: Talrak Construction Chemicals, fischer India, Arto Precast, Swabhimani Bharath Alu
+Forms (formwork). Check the email domain, not just the company name — one Ranka Group director sits
+on `@ranka.com` (real estate, fine) and another on `@rankasteels.com` (steel, excluded).
+
+⚠️ **The org `industry` field can contradict the keyword tags — trust `industry`.** Komarla Group
+matched construction tags but enriches as **`farming`** (a poultry group with a property sideline).
+MOGG'S Estates enriches as `financial services`. This is only visible *after* enrichment, so re-run
+the fit check on the enriched records, not just the search listing.
+
 **b. Net-new only.** Page through `apollo_contacts_search` and collect every `person_id`. Exclude
-anyone already saved. (576 contacts as of 2026-09-07 — **6 pages** at `per_page: 100`; keep paging
-until a page returns fewer than 100.) Note a company already appearing in the base does not mean
+anyone already saved. (628 contacts as of 2026-09-15 — **7 pages** at `per_page: 100`; keep paging
+until a page returns fewer than 100, and make sure your file glob catches every page before you
+trust the result.) Note a company already appearing in the base does not mean
 the person does — dedupe on `person_id`, not company name.
 
 **c. Client exclusion — never cold-pitch an existing customer.**
@@ -89,6 +103,7 @@ Known client groups — exclude all entities:
 | SNN | "SNN BUILDERS", "SNN PROPERTIES LLP", "SNN SPIRITUA DEVELOPERS" — also SNN Estates, SNN Raj Corp (~539 MT) |
 | Ruchira | "RUCHIRA DEVELOPERS LLP" — also Ruchira Projects |
 | Elegant | "ELEGANT BUILDERS AND DEVELOPERS", "ELEGANT ALTIMA", "ELEGANT ATMOS" (~558 MT) |
+| NBR | "NBR PROJECTS LLP" (99.88 MT) — also NBR Group |
 
 Also permanently excluded by user instruction (2026-08-03), though not on the client list:
 **Prestige Group · Sumadhura Infracon · Modern Spaaces · DivyaSree Developers**
@@ -101,7 +116,12 @@ Known false positives — do **not** exclude these:
 - Durga Projects & Infrastructure ≠ "SRI DURGA TRADERS" (a trader, different firm)
 - Disha Habitat ≠ "ADISHAKTI SMELTERS" (substring artefact — "DISHA" inside "ADISHAKTI")
 
-**d. Fit.** Structural builders, developers and civil contractors are the target — they buy TMT
+**d. Fit — check the enriched `headline`, not just the company.** An org tagged `construction` can
+still be a fitout shop. Two examples from 2026-09-15: Bluebeam Infra's ops director reads "Office
+Design & Fit-Out Specialist | Corporate Interiors", and Monarch Group's director reads "grade A
+managed office spaces". Both were rerouted to the fitout list after saving.
+
+Structural builders, developers and civil contractors are the target — they buy TMT
 rebar. Coworking operators and interior-fitout firms are weak fits: WeWork, IndiQube, BHIVE,
 MOJO Campus, Table Space, Livspace, HomeLane, Design Arc Interiors, Zyeta, Simpliwork, Truww,
 Studio19, Acme Interiors, Nag Interiors, The KariGhars, Aiti Interieurs, LVNG Design Studio.
@@ -122,6 +142,9 @@ each top-level `request_id`.
 
 - Cost: 1 credit per email match, **~8 credits per revealed phone**. A 50-person run is ~275–300
   with phones, ~50 without.
+- 💡 Many enriched records carry the company's **work_hq switchboard number for free**, attached on
+  save (18 of 24 on 2026-09-15). Not a direct dial, but a usable route in while direct-dial credits
+  are out — mention it in the summary.
 - Drop anyone whose email comes back `unavailable`.
 - ⚠️ Apollo may report `email_status: "verified"` while also setting
   `extrapolated_email_confidence`. That means the address is a **guess**. Exclude those from the

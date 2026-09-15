@@ -16,14 +16,16 @@ procurement/purchase decision-makers at Bengaluru real-estate developers and civ
 |---|---|
 | Weekly routine | **Active** — fires Mondays 09:00 IST, fresh session each run (`trig_01VNyxSiboYsDLyXFMfHS1pt`) |
 | Sales Outreach Sequence | **ACTIVE** — rebuilt to 4 steps (LinkedIn + 3 calls, **no email steps**), `manual_approve` |
-| Contacts in Apollo | 576 total |
+| Contacts in Apollo | 652 total |
 | Credits remaining | Lead **2,741**; **direct-dial 0** (exhausted, resets 2026-08-22) |
 | Week-4 run (2026-08-10) | **Held** after filtering — 1 credit spent, nothing saved |
 | Week-5 run (2026-08-17) | **Held** — 0 credits spent, blocker unchanged |
 | Week-6 run (2026-08-17) | **Completed** — 35 saved, 37 credits, nothing enrolled |
 | Week-7 run (2026-08-27) | **Completed** — 2 more saved, **35 enrolled active**, 45 credits |
 | Week-8 run (2026-09-07) | **Completed** — **53 saved and enrolled active**, 58 credits, new Search C opened |
-| ⛔ Blocker | **No phone numbers on any of the 88 enrolled** — sequence is 3/4 calls, direct-dial credits at 0 |
+| Week-9 run (2026-09-15) | **Completed** — **22 saved and enrolled active** + 2 to fitout, 30 credits |
+| ⛔ Blocker | **No direct dials on any of the 110 enrolled** — sequence is 3/4 calls, direct-dial credits still 0 (resets 2026-09-26). Many records do carry a free company switchboard number. |
+| ✅ Good news | The overdue task queue went 35 → **0** — the rep is working the calls |
 | ⚠️ Credits | Plan limits roughly halved on the 2026-08-26 cycle; direct-dial 2,500 fully consumed within ~1 day by something outside this project |
 
 ### ⛔ Uncarried instruction — read this first
@@ -48,10 +50,10 @@ Do not guess these — all confirmed from live tool responses.
 ### Lists (labels, modality = contacts)
 | Name | ID | Count |
 |---|---|---|
-| Builders in Bengaluru | `6a607ee13dbb2e0018c328f3` | 264 |
+| Builders in Bengaluru | `6a607ee13dbb2e0018c328f3` | 266 |
 | Builders in Mysore | `6a72b5f101ce1c00109eb9d7` | 6 |
 | Builders - Karnataka Tier 2 | `6a72b82ffe136b0010a66783` | 2 |
-| Fitout & Interiors - Bengaluru | `6a82b1893374bd0010197047` | 2 |
+| Fitout & Interiors - Bengaluru | `6a82b1893374bd0010197047` | 4 |
 
 ### Accounts / people
 | Thing | ID |
@@ -160,6 +162,7 @@ session cannot read it.
 | SNN Builders / Properties / Spiritua | 538.79 MT | Caught week 8 — also SNN Estates, SNN Raj Corp (3 contacts dropped) |
 | Ruchira Developers LLP | 85.73 MT | Caught week 8 — also Ruchira Projects |
 | Elegant Builders and Developers (+ Altima, Atmos) | 558.03 MT | Caught week 8 — exact name match |
+| NBR Projects LLP | 99.88 MT | Caught week 9 — also NBR Group |
 
 ### Also permanently excluded (user instruction 2026-08-03 — not on the client list)
 Prestige Group · Sumadhura Infracon · Modern Spaaces · DivyaSree Developers
@@ -199,6 +202,7 @@ numbers on the Mysore list for manual calling.
 | Week 6 | Aug 17 | A p4 + B p1 | 35 | 35 | 0 (banked) | 37 |
 | Week 7 | Aug 27 | B p2 | 8 | 2 | **35 (all active)** | 8 |
 | Week 8 | Sep 7 | **C p1** | 57 | 53 | **53 (all active)** | 58 |
+| Week 9 | Sep 15 | C p2 | 29 | 24 | **22 (all active)** | 30 |
 
 **Search B is degrading fast.** Page 1 gave 33 usable of 100; page 2 gave **2 of 100** — the
 keyword tags pull in law firms, fintech and property brokerages that merely mention "real estate".

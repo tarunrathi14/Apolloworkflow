@@ -1,0 +1,292 @@
+[
+ {
+  "name": "Raghuveer Veeramachaneni",
+  "title": "Managing Director",
+  "org": "Vista Spaces",
+  "email": "raghuveer@vistaspaces.in",
+  "ex": null,
+  "cat": false,
+  "emp": 32,
+  "ind": "real estate"
+ },
+ {
+  "name": "Akhilesh Komarla",
+  "title": "Owner",
+  "org": "Komarla Group",
+  "email": "akhilesh@komarla.com",
+  "ex": null,
+  "cat": true,
+  "emp": 61,
+  "ind": "farming"
+ },
+ {
+  "name": "Sujit Komarla",
+  "title": "Director",
+  "org": "Komarla Group",
+  "email": "sujit@komarla.com",
+  "ex": null,
+  "cat": true,
+  "emp": 61,
+  "ind": "farming"
+ },
+ {
+  "name": "Manoj Lodha",
+  "title": "Owner",
+  "org": "Yesh Developers",
+  "email": "manoj@yeshdevelopers.com",
+  "ex": null,
+  "cat": true,
+  "emp": 44,
+  "ind": "real estate"
+ },
+ {
+  "name": "Rajesh Binner",
+  "title": "Director",
+  "org": "DNR Corporation",
+  "email": "rajesh@dnrgroup.in",
+  "ex": null,
+  "cat": false,
+  "emp": 38,
+  "ind": "real estate"
+ },
+ {
+  "name": "Ashok Ranka",
+  "title": "Director",
+  "org": "Ranka Group",
+  "email": "ashok@rankasteels.com",
+  "ex": null,
+  "cat": true,
+  "emp": 110,
+  "ind": "real estate"
+ },
+ {
+  "name": "Gaurav Ranka",
+  "title": "Associate Director",
+  "org": "Ranka Group",
+  "email": "garanka@ranka.com",
+  "ex": null,
+  "cat": false,
+  "emp": 110,
+  "ind": "real estate"
+ },
+ {
+  "name": "Nagaveni Ramesh",
+  "title": "Director",
+  "org": "Peninsula Infra Developments Pvt. Ltd.",
+  "email": "nagaveni@peninsulainfra.in",
+  "ex": null,
+  "cat": false,
+  "emp": 58,
+  "ind": "construction"
+ },
+ {
+  "name": "Gourav Shurdeo",
+  "title": "Director - Development",
+  "org": "Convergence Property Development Services Private Limited",
+  "email": "gourav@cpdsindia.com",
+  "ex": null,
+  "cat": false,
+  "emp": 83,
+  "ind": "real estate"
+ },
+ {
+  "name": "Bhm Prasad",
+  "title": "Project Director",
+  "org": "Convergence Property Development Services Private Limited",
+  "email": "prasad@cpdsindia.com",
+  "ex": null,
+  "cat": false,
+  "emp": 83,
+  "ind": "real estate"
+ },
+ {
+  "name": "Ratan Lath",
+  "title": "Director",
+  "org": "Valmark",
+  "email": "ratan@valmark.in",
+  "ex": null,
+  "cat": true,
+  "emp": 78,
+  "ind": "real estate"
+ },
+ {
+  "name": "Mahaveer Gulecha",
+  "title": "Director",
+  "org": "Valmark",
+  "email": "mahaveer@valmark.in",
+  "ex": null,
+  "cat": true,
+  "emp": 78,
+  "ind": "real estate"
+ },
+ {
+  "name": "Vinay Bharaktiya",
+  "title": "Director - Operations",
+  "org": "Valmark",
+  "email": "vbharaktiya@valmark.in",
+  "ex": null,
+  "cat": true,
+  "emp": 78,
+  "ind": "real estate"
+ },
+ {
+  "name": "Manjunath Ns",
+  "title": "Director of Operations",
+  "org": "Imperial Build Tech Private Limited",
+  "email": "manju@imperialbuildtech.com",
+  "ex": null,
+  "cat": true,
+  "emp": 91,
+  "ind": "construction"
+ },
+ {
+  "name": "Sreeraj V",
+  "title": "Director of Operations",
+  "org": "BLUEBEAM INFRA PVT LTD",
+  "email": "sreeraj@bluebeaminfra.com",
+  "ex": null,
+  "cat": false,
+  "emp": 36,
+  "ind": "construction"
+ },
+ {
+  "name": "Nayeem Pasha",
+  "title": "Project Director",
+  "org": "FUTUREARTH GROUP",
+  "email": "nayeem@futurearthindia.com",
+  "ex": null,
+  "cat": false,
+  "emp": 35,
+  "ind": "real estate"
+ },
+ {
+  "name": "Safia Dawood",
+  "title": "Director",
+  "org": "Monarch Group",
+  "email": "safia@monarchgroup.in",
+  "ex": null,
+  "cat": true,
+  "emp": 63,
+  "ind": "real estate"
+ },
+ {
+  "name": "Mahesh Sadhwani",
+  "title": "Managing Director",
+  "org": "SKAV Developers",
+  "email": "ms@skav.in",
+  "ex": null,
+  "cat": true,
+  "emp": 47,
+  "ind": "construction"
+ },
+ {
+  "name": "Biju John",
+  "title": "Managing Director",
+  "org": "August Ventures Private Limited",
+  "email": "bijujohn@august.in",
+  "ex": null,
+  "cat": false,
+  "emp": 32,
+  "ind": "real estate"
+ },
+ {
+  "name": "Rahul Sabharwal",
+  "title": "Co-Founder & Director",
+  "org": "Vedaanta Senior Living",
+  "email": "rahul@vedaanta.com",
+  "ex": null,
+  "cat": true,
+  "emp": 75,
+  "ind": "health, wellness & fitness"
+ },
+ {
+  "name": "Sarveshaa Sb",
+  "title": "Chairman & Managing Director",
+  "org": "BHADRA Group",
+  "email": "ssb@bhadragroup.com",
+  "ex": null,
+  "cat": true,
+  "emp": 53,
+  "ind": "real estate"
+ },
+ {
+  "name": "Sangeetha Reddy",
+  "title": "Director",
+  "org": "Manyata Developers Pvt. Ltd",
+  "email": "sangeetha@manyata.co.in",
+  "ex": null,
+  "cat": false,
+  "emp": 140,
+  "ind": "real estate"
+ },
+ {
+  "name": "Akshay Reddy",
+  "title": "Director",
+  "org": "Cornerstone Properties Private Limited",
+  "email": "akshay@cornerstoneindia.in",
+  "ex": null,
+  "cat": false,
+  "emp": 63,
+  "ind": "real estate"
+ },
+ {
+  "name": "Arhanth Dinesh",
+  "title": "MD",
+  "org": "Krishvi Group",
+  "email": "arhanth@krishvi.com",
+  "ex": null,
+  "cat": false,
+  "emp": 38,
+  "ind": "real estate"
+ },
+ {
+  "name": "Amogh Keegadi",
+  "title": "Founder & Director",
+  "org": "MOGG'S Estates",
+  "email": "amogh@moggs.in",
+  "ex": null,
+  "cat": false,
+  "emp": 25,
+  "ind": "financial services"
+ },
+ {
+  "name": "Abhijith Prasad",
+  "title": "Managing Director",
+  "org": "Protech Engineers Bangalore Private Limited",
+  "email": "abhijithprasad@protech-engineers.in",
+  "ex": null,
+  "cat": false,
+  "emp": 42,
+  "ind": "construction"
+ },
+ {
+  "name": "Prashanth Bd",
+  "title": "Director",
+  "org": "SpaceTheory Solutions Pvt. Ltd.",
+  "email": "prashanth@spacetheorysolutions.com",
+  "ex": null,
+  "cat": true,
+  "emp": 63,
+  "ind": "construction"
+ },
+ {
+  "name": "Harsha A",
+  "title": "Managing Director",
+  "org": "SpaceTheory Solutions Pvt. Ltd.",
+  "email": "harsha@spacetheorysolutions.com",
+  "ex": null,
+  "cat": true,
+  "emp": 63,
+  "ind": "construction"
+ },
+ {
+  "name": "Sandesh Kulkarni",
+  "title": "Company Owner",
+  "org": "Swabhimani bharath Alu Forms",
+  "email": "sardeshk@sbdal.in",
+  "ex": null,
+  "cat": true,
+  "emp": 38,
+  "ind": "construction"
+ }
+]
