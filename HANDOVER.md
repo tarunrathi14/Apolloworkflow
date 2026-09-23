@@ -16,7 +16,7 @@ procurement/purchase decision-makers at Bengaluru real-estate developers and civ
 |---|---|
 | Weekly routine | **Active** — fires Mondays 09:00 IST, fresh session each run (`trig_01VNyxSiboYsDLyXFMfHS1pt`) |
 | Sales Outreach Sequence | **ACTIVE** — rebuilt to 4 steps (LinkedIn + 3 calls, **no email steps**), `manual_approve` |
-| Contacts in Apollo | 652 total |
+| Contacts in Apollo | 728 total |
 | Credits remaining | Lead **2,741**; **direct-dial 0** (exhausted, resets 2026-08-22) |
 | Week-4 run (2026-08-10) | **Held** after filtering — 1 credit spent, nothing saved |
 | Week-5 run (2026-08-17) | **Held** — 0 credits spent, blocker unchanged |
@@ -24,8 +24,9 @@ procurement/purchase decision-makers at Bengaluru real-estate developers and civ
 | Week-7 run (2026-08-27) | **Completed** — 2 more saved, **35 enrolled active**, 45 credits |
 | Week-8 run (2026-09-07) | **Completed** — **53 saved and enrolled active**, 58 credits, new Search C opened |
 | Week-9 run (2026-09-15) | **Completed** — **22 saved and enrolled active** + 2 to fitout, 30 credits |
-| ⛔ Blocker | **No direct dials on any of the 110 enrolled** — sequence is 3/4 calls, direct-dial credits still 0 (resets 2026-09-26). Many records do carry a free company switchboard number. |
-| ✅ Good news | The overdue task queue went 35 → **0** — the rep is working the calls |
+| Week-10 run (2026-09-21) | **Completed** — **40 saved, 39 enrolled active**, 49 credits, new Search D opened |
+| ⛔ Blocker | **No direct dials on any of the 149 enrolled** — sequence is 3/4 calls, direct-dial credits still 0 (resets 2026-09-26). Many records do carry a free company switchboard number. |
+| ⚠️ Call queue | Was cleared to 0 on 2026-09-15; back to **22 overdue** by 2026-09-21, before this run added 39 |
 | ⚠️ Credits | Plan limits roughly halved on the 2026-08-26 cycle; direct-dial 2,500 fully consumed within ~1 day by something outside this project |
 
 ### ⛔ Uncarried instruction — read this first
@@ -50,7 +51,7 @@ Do not guess these — all confirmed from live tool responses.
 ### Lists (labels, modality = contacts)
 | Name | ID | Count |
 |---|---|---|
-| Builders in Bengaluru | `6a607ee13dbb2e0018c328f3` | 266 |
+| Builders in Bengaluru | `6a607ee13dbb2e0018c328f3` | 288 |
 | Builders in Mysore | `6a72b5f101ce1c00109eb9d7` | 6 |
 | Builders - Karnataka Tier 2 | `6a72b82ffe136b0010a66783` | 2 |
 | Fitout & Interiors - Bengaluru | `6a82b1893374bd0010197047` | 4 |
@@ -203,6 +204,7 @@ numbers on the Mysore list for manual calling.
 | Week 7 | Aug 27 | B p2 | 8 | 2 | **35 (all active)** | 8 |
 | Week 8 | Sep 7 | **C p1** | 57 | 53 | **53 (all active)** | 58 |
 | Week 9 | Sep 15 | C p2 | 29 | 24 | **22 (all active)** | 30 |
+| Week 10 | Sep 21 | C p3 + **D p1** | 47 | 40 | **39** (1 blocked) | 49 |
 
 **Search B is degrading fast.** Page 1 gave 33 usable of 100; page 2 gave **2 of 100** — the
 keyword tags pull in law firms, fintech and property brokerages that merely mention "real estate".

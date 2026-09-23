@@ -36,11 +36,14 @@ Everything below depends on files on that branch.
 ### 1. Search
 `apollo_mixed_people_api_search`, 1 credit per request.
 
-**Search C — directors at mid-size construction firms. THIS IS THE ACTIVE SEARCH** (opened
-2026-09-07). Pool ~1,095. Page 1 yielded 53 saved, page 2 yielded 22 — still the best seam the
-project has had, but decaying. Plan to widen again around page 4.
+**Search D — senior operations/projects staff at mid-size construction firms. ACTIVE SEARCH**
+(opened 2026-09-21). Pool 513; page 1 yielded 40 saved. This reaches the **actual buying centre** —
+VP-Projects, GM-Projects, GM-Construction, GM-MEP, DGM-Procurement — rather than founders, and at
+companies already proven as good fits.
 
-- `person_titles`: director, managing director, founder, proprietor, partner, owner
+- `person_titles`: vice president, general manager, chief operating officer, head of projects,
+  project director, vp projects, head of procurement, purchase head, senior general manager,
+  assistant general manager
 - `include_similar_titles`: **false**
 - `person_locations`: `["Bengaluru, India"]`
 - `organization_locations`: `["Bengaluru, India"]`
@@ -48,19 +51,24 @@ project has had, but decaying. Plan to widen again around page 4.
 - `organization_num_employees_ranges`: `["25,200"]`
 - `q_organization_keyword_tags`: real estate development, real estate contractors, construction,
   building construction, residential building construction, nonresidential building construction
-- `per_page`: 100, `page`: `search_c_directors_25_200.next_search_page` from `run_state.json`
+- `per_page`: 100, `page`: `search_d_senior_ops_25_200.next_search_page` from `run_state.json`
 
-⚠️ **Do not add the bare `real estate` or `commercial real estate` tags.** They are what wrecked
-Search B — they match law firms, fintech, proptech and brokerages that merely mention property.
-Construction-only tags are the whole reason Search C works.
+⚠️ **These titles need the hardest fit check.** A "General Manager" at a developer may run sales,
+HR, finance, legal, CRM or IT. Read the enriched `headline` on every one — see filter (d).
 
-**Search A (procurement titles, 15+ employees) — EXHAUSTED.** Pool was 361; pages 1–4 used it up.
-**Search B (director titles, 15–24 employees) — worked out.** Page 1 gave 33 of 100, page 2 gave 2
-of 100. Its `next_search_page` is 3 if ever needed, but prefer Search C.
+⚠️ **Never add the bare `real estate` or `commercial real estate` tags.** They match law firms,
+fintech, proptech and brokerages. Construction-only tags are what make these searches work.
 
-Founder/director titles beat procurement titles in this market: small and mid-size Bengaluru
-developers are run by their founders, while procurement-title searches surface IT and
-manufacturing staff.
+**Exhausted / worked out — do not re-run:**
+| Search | Titles | Size | Outcome |
+|---|---|---|---|
+| A | procurement titles | 15+ | exhausted, pool was only 361 |
+| B | director/founder | 15–24 | p1 33, p2 2 — worked out |
+| C | director/founder | 25–200 | p1 53, p2 22, p3 8 — worked out |
+
+**When Search D runs dry,** the next untouched seams are: the same senior-ops titles at 200–1000
+employee firms, or Search C/D titles in Bengaluru's satellite corridors. Do not go back to
+Karnataka tier-2 cities — Mysore, Mangalore, Belgaum and Hubli were all tested and are too thin.
 
 ### 2. Review — four filters, all of them
 
@@ -82,10 +90,17 @@ MOGG'S Estates enriches as `financial services`. This is only visible *after* en
 the fit check on the enriched records, not just the search listing.
 
 **b. Net-new only.** Page through `apollo_contacts_search` and collect every `person_id`. Exclude
-anyone already saved. (628 contacts as of 2026-09-15 — **7 pages** at `per_page: 100`; keep paging
+anyone already saved. (690 contacts as of 2026-09-21 — **7 pages** at `per_page: 100`; keep paging
 until a page returns fewer than 100, and make sure your file glob catches every page before you
-trust the result.) Note a company already appearing in the base does not mean
-the person does — dedupe on `person_id`, not company name.
+trust the result.)
+
+⚠️ `person_id` is not a complete dedupe key. Two contacts on 2026-09-21 came back as
+`existing_contacts` from `apollo_contacts_bulk_create` despite passing the person_id check —
+Apollo also matches on **email**. That is harmless (it updates rather than duplicates), but it
+means the net-new count is an estimate until the create call returns.
+
+A company already appearing in the base does not mean the person does — dedupe on `person_id`,
+not company name.
 
 **c. Client exclusion — never cold-pitch an existing customer.**
 Read `data/active_clients.csv` (198 rows, `client_name`, `qty_mt`). Match on **company name and
@@ -116,8 +131,14 @@ Known false positives — do **not** exclude these:
 - Durga Projects & Infrastructure ≠ "SRI DURGA TRADERS" (a trader, different firm)
 - Disha Habitat ≠ "ADISHAKTI SMELTERS" (substring artefact — "DISHA" inside "ADISHAKTI")
 
-**d. Fit — check the enriched `headline`, not just the company.** An org tagged `construction` can
-still be a fitout shop. Two examples from 2026-09-15: Bluebeam Infra's ops director reads "Office
+**d. Fit — check the enriched `headline`, not just the company.** With Search D titles this is the
+filter that does the most work: on 2026-09-21 it removed 7 of 47 whose titles read operational but
+whose headlines said otherwise — Commercial Leasing, Business Development, AGM–Sales, "Head of
+Projects" meaning *Business, Revenue & Growth*, AVP-CRM, AGM-Finance and a CRM manager.
+Want: Projects, Construction, MEP, Procurement, Operations, Planning, QS/Contracts.
+Don't want: Sales, Marketing, CRM, Leasing, Finance, Legal, HR, IT, Business Development.
+
+The same check catches fitout shops hiding behind a `construction` tag. Two examples from 2026-09-15: Bluebeam Infra's ops director reads "Office
 Design & Fit-Out Specialist | Corporate Interiors", and Monarch Group's director reads "grade A
 managed office spaces". Both were rerouted to the fitout list after saving.
 

@@ -1,7 +1,7 @@
 {
   "_comment": "Mutable state for the weekly Apollo outbound run. Each run reads this, then commits an updated copy back to the branch so the next fresh session picks up where this one left off.",
 
-  "_searches": "Search C (director/founder titles at 25-200 employee firms, construction-only tags) is the active seam. Pool ~1,095. Page 1 yielded 53 saved, page 2 yielded 22 - still the best search the project has, but decaying. Expect to widen again around page 4.",
+  "_searches": "Search D (senior operations/projects titles at 25-200 employee construction firms) opened 2026-09-21 and is now the active seam - it reaches the actual buying centre (VP-Projects, GM-Projects, GM-Construction, GM-MEP, DGM-Procurement) rather than founders. Pool 513, page 1 yielded 40 saved. Search C is worked out at page 3.",
 
   "search_a_procurement_titles": {
     "status": "exhausted",
@@ -11,26 +11,35 @@
   },
   "search_b_directors_15_24": {
     "status": "worked out",
-    "note": "page 1 gave 33 saved of 100; page 2 gave 2 of 100",
+    "note": "page 1 gave 33 of 100; page 2 gave 2 of 100",
     "total_pool": 386,
     "pages_used": [1, 2],
     "next_search_page": 3
   },
   "search_c_directors_25_200": {
-    "status": "active",
-    "note": "person_titles director/managing director/founder/proprietor/partner/owner, include_similar_titles false, org employees 25-200, construction-only keyword tags. See RUNBOOK.md section 1.",
-    "total_pool": 1095,
-    "pages_used": [1, 2],
-    "next_search_page": 3,
-    "yield_by_page": { "1": "53 saved of 100", "2": "22 saved of 100" }
+    "status": "worked out",
+    "note": "page 1 gave 53, page 2 gave 22, page 3 gave only 8 usable (law firms, VC, construction-tech). Same company profile as Search D but founder/director titles.",
+    "total_pool": 1086,
+    "pages_used": [1, 2, 3],
+    "next_search_page": 4,
+    "yield_by_page": { "1": "53 of 100", "2": "22 of 100", "3": "8 of 100" }
+  },
+  "search_d_senior_ops_25_200": {
+    "status": "active - best performing",
+    "note": "person_titles vice president/general manager/chief operating officer/head of projects/project director/vp projects/head of procurement/purchase head/senior general manager/assistant general manager, include_similar_titles false, org employees 25-200, construction-only keyword tags. See RUNBOOK.md section 1.",
+    "total_pool": 513,
+    "pages_used": [1],
+    "next_search_page": 2,
+    "yield_by_page": { "1": "40 saved of 100 (combined with C p3)" }
   },
 
-  "next_search_page": 3,
-  "active_search": "search_c_directors_25_200",
-  "last_run_date": "2026-09-15",
-  "last_run_outcome": "22 saved and ENROLLED active + 2 routed to fitout list; 30 lead credits; still no direct-dial phones",
-  "sequence_state": "ACTIVE - 4 steps, LinkedIn + 3 calls, no email steps; overdue task queue cleared to 0",
+  "next_search_page": 2,
+  "active_search": "search_d_senior_ops_25_200",
+  "last_run_date": "2026-09-21",
+  "last_run_outcome": "40 saved, 39 ENROLLED active (1 blocked as finished-in-other-campaign); 49 lead credits; 31 of 38 new records carry a company switchboard number",
+  "sequence_state": "ACTIVE - 4 steps, LinkedIn + 3 calls, no email steps",
+  "sequence_overdue_tasks_at_run": 22,
   "direct_dial_credits_exhausted": true,
   "credit_cycle_resets": "2026-09-26",
-  "phones_still_needed_for": 110
+  "phones_still_needed_for": 149
 }
