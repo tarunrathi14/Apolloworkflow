@@ -1,0 +1,55 @@
+# GeM Scout — seller profile
+# Edit this file to change what the daily scan looks for. The routine reads it
+# fresh on every run, so changes take effect the next morning.
+
+seller:
+  brand: President TMT            # CONFIRM: assumed from "President DMT"
+  gem_category: "High Strength Deformed Steel Bars and Wires for Concrete Reinforcement (V2) ISI marked to IS 1786"
+  grades: [Fe 500, Fe 500D, Fe 550, Fe 550D]   # CONFIRM which grades you hold BIS licence for
+  sizes_mm: [8, 10, 12, 16, 20, 25, 32]          # CONFIRM
+  bis_licence: true                              # IS 1786
+  home_state: Karnataka                          # CONFIRM: drives freight scoring
+  preferred_states: [Karnataka, Tamil Nadu, Andhra Pradesh, Telangana, Kerala, Goa, Maharashtra]
+  mse: unknown        # set true if Udyam-registered — MSE purchase preference = L1+15%
+  mii_class1: true    # domestic steel qualifies as Make-in-India Class 1 — L1+20% preference
+  avg_turnover_lakh: unknown   # many TMT bids ask 100–250 lakh average turnover; set yours
+
+# Keywords searched on bidplus.gem.gov.in every morning.
+keywords:
+  core:        # your product — highest priority
+    - TMT
+    - TMT bar
+    - Deformed Steel Bars
+    - TOR steel
+    - reinforcement steel
+    - Fe 500D
+    - rebar
+  adjacent:    # products a TMT mill/dealer can usually also supply
+    - binding wire
+    - MS angle
+    - MS channel
+    - MS flat
+    - MS round bar
+    - hollow section
+    - structural steel
+    - wire rod
+    - billet
+    - ISMB beam
+    # note: plain "steel" returns ~100 bids, mostly almirahs and furniture; avoid
+  construction_bundle:  # mixed material bids where TMT is one line item
+    - construction material
+    - cement TMT
+
+exclude_terms:   # "TMT" also matches medical treadmill tests
+  - Cardiac TMT
+  - Treadmill
+  - Stress Test
+
+scoring:
+  core_match: 40
+  adjacent_match: 20
+  preferred_state: 15
+  qty_over_100_mt: 15
+  mse_or_mii_preference_in_bid: 10
+  no_emd_required: 5
+  closes_within_2_days: -10   # little time to prepare
