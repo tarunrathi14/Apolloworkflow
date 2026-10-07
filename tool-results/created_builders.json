@@ -1,0 +1,286 @@
+{
+ "created": [
+  {
+   "id": "6ac5d44454bafc0010de6b13",
+   "name": "Yuva Raj",
+   "email": "yraj@definer.in",
+   "org": "DeFINER PROPERTIES pvt ltd",
+   "person_id": "62ebcdc3c7e3e2000180c170",
+   "org_id": "5d0aaaffa3ae61d4775f1905",
+   "labels": [],
+   "campaigns": [],
+   "created_at": "2026-10-07T05:10:28.789Z"
+  },
+  {
+   "id": "6ac5d44454bafc0010de6b14",
+   "name": "Nimai Kannugo",
+   "email": "nimai@valmark.in",
+   "org": "Valmark",
+   "person_id": "6647199156262d0001a36bf5",
+   "org_id": "54a135a569702d425565bc00",
+   "labels": [],
+   "campaigns": [],
+   "created_at": "2026-10-07T05:10:28.789Z"
+  },
+  {
+   "id": "6ac5d44454bafc0010de6b15",
+   "name": "Virupakshayya Kempayyamath",
+   "email": "virupakshayyak@bsriil.com",
+   "org": "BSR Infratech India Ltd",
+   "person_id": "54aa9c3c7468690b75030f0e",
+   "org_id": "57c4a399a6da982bff30d0e1",
+   "labels": [],
+   "campaigns": [],
+   "created_at": "2026-10-07T05:10:28.789Z"
+  },
+  {
+   "id": "6ac5d44454bafc0010de6b16",
+   "name": "Pavithran Chandrasekaran",
+   "email": "pavithran@addressmaker.in",
+   "org": "Address Maker",
+   "person_id": "57df4fdca6da980b53df66ef",
+   "org_id": "556db60e73696411e34e8301",
+   "labels": [],
+   "campaigns": [],
+   "created_at": "2026-10-07T05:10:28.789Z"
+  },
+  {
+   "id": "6ac5d44454bafc0010de6b17",
+   "name": "Mridul Naidu",
+   "email": "mriduln@maiaestates.in",
+   "org": "MAIA Estates",
+   "person_id": "54a2f493746869382555c249",
+   "org_id": "5e579896b1d5f80001ec0fee",
+   "labels": [],
+   "campaigns": [],
+   "created_at": "2026-10-07T05:10:28.789Z"
+  },
+  {
+   "id": "6ac5d44454bafc0010de6b18",
+   "name": "Nagaraj Patil",
+   "email": "nagaraj.h@cornerstoneindia.in",
+   "org": "Cornerstone Properties Private Limited",
+   "person_id": "54a43ad77468692fa28cea36",
+   "org_id": "556d5bcb73696412083ae900",
+   "labels": [],
+   "campaigns": [],
+   "created_at": "2026-10-07T05:10:28.789Z"
+  },
+  {
+   "id": "6ac5d44454bafc0010de6b19",
+   "name": "Sarath M",
+   "email": "sarath@manyata.co.in",
+   "org": "Manyata Developers Pvt. Ltd",
+   "person_id": "5ab36e4ea6da9870527c8a93",
+   "org_id": "5e578a2a7eed11000119b848",
+   "labels": [],
+   "campaigns": [],
+   "created_at": "2026-10-07T05:10:28.789Z"
+  },
+  {
+   "id": "6ac5d44454bafc0010de6b1a",
+   "name": "Varun K",
+   "email": "varun@g5engineerings.com",
+   "org": "G5 Engineering Solutions Private Limited",
+   "person_id": "5f6d6550c4128b0001bad114",
+   "org_id": "5e563a9db0b5190001a5a5d2",
+   "labels": [],
+   "campaigns": [],
+   "created_at": "2026-10-07T05:10:28.789Z"
+  },
+  {
+   "id": "6ac5d44454bafc0010de6b1b",
+   "name": "Jayaprakash M",
+   "email": "jayaprakash@spacetheorysolutions.com",
+   "org": "SpaceTheory Solutions Pvt. Ltd.",
+   "person_id": "6317a89dfa9dbb0001492c3e",
+   "org_id": "60b26b515a5f2d0001e50944",
+   "labels": [],
+   "campaigns": [],
+   "created_at": "2026-10-07T05:10:28.789Z"
+  },
+  {
+   "id": "6ac5d44454bafc0010de6b1c",
+   "name": "Naveen Naveen",
+   "email": "naveen@dnrgroup.in",
+   "org": "DNR Corporation",
+   "person_id": "5fd1c8043d18f400015a3449",
+   "org_id": "6412ab431678ff008b9fb260",
+   "labels": [],
+   "campaigns": [],
+   "created_at": "2026-10-07T05:10:28.789Z"
+  },
+  {
+   "id": "6ac5d44454bafc0010de6b1d",
+   "name": "Diwakar S",
+   "email": "diwakar@om-tec.in",
+   "org": "Omtec Engineering & Constructions Pvt. Ltd",
+   "person_id": "6532b451a4603c000168fbfd",
+   "org_id": "67300b3f93cdbb0001d8c270",
+   "labels": [],
+   "campaigns": [],
+   "created_at": "2026-10-07T05:10:28.789Z"
+  },
+  {
+   "id": "6ac5d44454bafc0010de6b1e",
+   "name": "Fheroz Ismail",
+   "email": "fheroz@spacetheorysolutions.com",
+   "org": "SpaceTheory Solutions Pvt. Ltd.",
+   "person_id": "6127755b54cc6f00012e9a41",
+   "org_id": "60b26b515a5f2d0001e50944",
+   "labels": [],
+   "campaigns": [],
+   "created_at": "2026-10-07T05:10:28.789Z"
+  },
+  {
+   "id": "6ac5d44454bafc0010de6b1f",
+   "name": "Chetan Ci",
+   "email": "chetan@whitelotusgroup.in",
+   "org": "White Lotus Group",
+   "person_id": "5b39cb0ca6da9854f2e22282",
+   "org_id": "655510d63089e100d15d3528",
+   "labels": [],
+   "campaigns": [],
+   "created_at": "2026-10-07T05:10:28.789Z"
+  },
+  {
+   "id": "6ac5d44454bafc0010de6b20",
+   "name": "Karthikeyan D",
+   "email": "karthikeyan@manyata.co.in",
+   "org": "Manyata Developers Pvt. Ltd",
+   "person_id": "649c0c97c2634500017dfe24",
+   "org_id": "5e578a2a7eed11000119b848",
+   "labels": [],
+   "campaigns": [],
+   "created_at": "2026-10-07T05:10:28.789Z"
+  },
+  {
+   "id": "6ac5d44454bafc0010de6b21",
+   "name": "Azhar Ahmed",
+   "email": "azhar.ahmed@vbhc.com",
+   "org": "VBHC",
+   "person_id": "5c5fca2f80f93eddc113b45a",
+   "org_id": "54a12b4f69702dcef96c9a02",
+   "labels": [],
+   "campaigns": [],
+   "created_at": "2026-10-07T05:10:28.789Z"
+  },
+  {
+   "id": "6ac5d44454bafc0010de6b22",
+   "name": "Pururav Nag",
+   "email": "pururav@sizzleproperties.com",
+   "org": "Sizzle Properties Pvt Ltd.",
+   "person_id": "649db7aab989e5000163a300",
+   "org_id": "5b8611f1f874f72e47be70ec",
+   "labels": [],
+   "campaigns": [],
+   "created_at": "2026-10-07T05:10:28.789Z"
+  },
+  {
+   "id": "6ac5d44454bafc0010de6b23",
+   "name": "Sudhama V",
+   "email": "sudhama@renaissanceholdings.com",
+   "org": "Renaissance Holdings & Developers (P) Ltd",
+   "person_id": "68334d312711ce00016b6a16",
+   "org_id": "5ed2dca0bf59b6000157021f",
+   "labels": [],
+   "campaigns": [],
+   "created_at": "2026-10-07T05:10:28.789Z"
+  },
+  {
+   "id": "6ac5d44454bafc0010de6b24",
+   "name": "Giridhar Yelchuru",
+   "email": "giridhar.yelchuru@total-environment.com",
+   "org": "Total Environment",
+   "person_id": "66d2d2ff9bdb7300017a035c",
+   "org_id": "54a23b827468693a7ede2218",
+   "labels": [],
+   "campaigns": [],
+   "created_at": "2026-10-07T05:10:28.789Z"
+  },
+  {
+   "id": "6ac5d44454bafc0010de6b25",
+   "name": "Manish K",
+   "email": "manish@houzbay.com",
+   "org": "HOUZBAY",
+   "person_id": "60d3d8c474f1170001c3045e",
+   "org_id": "604a01b5a933040001c01d58",
+   "labels": [],
+   "campaigns": [],
+   "created_at": "2026-10-07T05:10:28.789Z"
+  }
+ ],
+ "existing": [
+  {
+   "id": "6a60a0adbe96100010c857ce",
+   "name": "Dilip Kumar",
+   "email": "dilip@v3intrix.in",
+   "org": "V3 INTRIX PRIVATE LIMITED",
+   "person_id": "649d8402aa1c8600019aa32f",
+   "org_id": null,
+   "labels": [
+    "6a607ee13dbb2e0018c328f3"
+   ],
+   "campaigns": [
+    "6a6080c3ab6e0e0020a91ae2"
+   ],
+   "created_at": "2026-07-22T10:51:25.793Z"
+  },
+  {
+   "id": "6ab39ebb8536ac000c1d90d1",
+   "name": "Ajith Kumar",
+   "email": "ajith@valmark.in",
+   "org": "Valmark",
+   "person_id": "5ad5a662a6da98673201678b",
+   "org_id": "54a135a569702d425565bc00",
+   "labels": [
+    "6a607ee13dbb2e0018c328f3"
+   ],
+   "campaigns": [
+    "6a6080c3ab6e0e0020a91ae2"
+   ],
+   "created_at": "2026-09-23T09:41:15.217Z"
+  },
+  {
+   "id": "6a60a0adbe96100010c857c8",
+   "name": "Praveen Parmeshwar",
+   "email": "praveen@bcim.in",
+   "org": "BCIM Engineering Pvt Ltd",
+   "person_id": "63567aaa99acb1000108d7cd",
+   "org_id": "5e5788d39c01df00011f251e",
+   "labels": [
+    "6a607ee13dbb2e0018c328f3"
+   ],
+   "campaigns": [
+    "6a6080c3ab6e0e0020a91ae2"
+   ],
+   "created_at": "2026-07-22T10:51:25.793Z"
+  },
+  {
+   "id": "6ab25fcbad5a2d0017e50ca0",
+   "name": "Shankar Kkrishnamurthy",
+   "email": "shankar@addressmaker.in",
+   "org": "Address Maker",
+   "person_id": "63a2fd1118fdf00001647eff",
+   "org_id": "556db60e73696411e34e8301",
+   "labels": [],
+   "campaigns": [],
+   "created_at": "2026-09-22T11:00:27.980Z"
+  },
+  {
+   "id": "6a606bab5c809a0001642cd6",
+   "name": "Saikrishna Ramireddy",
+   "email": "saikrishna.ramireddy@trifectaprojects.com",
+   "org": "Trifecta Projects",
+   "person_id": "5e8699f1f9f4f700011accf4",
+   "org_id": "556dd4ad7369641258bb9c01",
+   "labels": [
+    "6a607ee13dbb2e0018c328f3"
+   ],
+   "campaigns": [
+    "6a6080c3ab6e0e0020a91ae2"
+   ],
+   "created_at": "2026-07-22T07:05:15.167Z"
+  }
+ ]
+}

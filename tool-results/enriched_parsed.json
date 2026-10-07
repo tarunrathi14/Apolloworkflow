@@ -1,0 +1,760 @@
+[
+ {
+  "id": "649d8402aa1c8600019aa32f",
+  "name": "Dilip Kumar",
+  "title": "Head of Procurement",
+  "headline": "Head of Procurement at V3 Intrix Pvt Ltd",
+  "email": "dilip@v3intrix.in",
+  "email_status": "verified",
+  "extrapolated": null,
+  "org": "V3 INTRIX PRIVATE LIMITED",
+  "domain": "v3intrix.in",
+  "industry": "construction",
+  "industries": [
+   "construction",
+   "architecture & planning",
+   "design"
+  ],
+  "emp": 40,
+  "seniority": "head",
+  "depts": [
+   "sourcing_procurement"
+  ],
+  "funcs": [
+   "finance"
+  ],
+  "work_hq": null,
+  "already_contact": false
+ },
+ {
+  "id": "5ad5a662a6da98673201678b",
+  "name": "Ajith Kumar",
+  "title": "Assistant General Manager",
+  "headline": "Assistant General Manager at Valmark",
+  "email": "ajith@valmark.in",
+  "email_status": "verified",
+  "extrapolated": null,
+  "org": "Valmark",
+  "domain": "valmark.in",
+  "industry": "real estate",
+  "industries": [
+   "real estate",
+   "construction"
+  ],
+  "emp": 79,
+  "seniority": "manager",
+  "depts": [
+   "operations"
+  ],
+  "funcs": [
+   "operations"
+  ],
+  "work_hq": "+918041477330",
+  "already_contact": false
+ },
+ {
+  "id": "63567aaa99acb1000108d7cd",
+  "name": "Praveen Parmeshwar",
+  "title": "Dy. General Manager - Procurement",
+  "headline": "Dy. General Manager Procurement at BCIM",
+  "email": "praveen@bcim.in",
+  "email_status": "verified",
+  "extrapolated": null,
+  "org": "BCIM Engineering Pvt Ltd",
+  "domain": "bcim.in",
+  "industry": "construction",
+  "industries": [
+   "construction"
+  ],
+  "emp": 99,
+  "seniority": "manager",
+  "depts": [
+   "sourcing_procurement"
+  ],
+  "funcs": [
+   "finance"
+  ],
+  "work_hq": "+918044324693",
+  "already_contact": false
+ },
+ {
+  "id": "62ebcdc3c7e3e2000180c170",
+  "name": "Yuva Raj",
+  "title": "Deputy General Manager",
+  "headline": "--",
+  "email": "yraj@definer.in",
+  "email_status": "verified",
+  "extrapolated": null,
+  "org": "DeFINER PROPERTIES pvt ltd",
+  "domain": "definer.in",
+  "industry": "real estate",
+  "industries": [
+   "real estate",
+   "commercial real estate",
+   "construction"
+  ],
+  "emp": 27,
+  "seniority": "manager",
+  "depts": [
+   "operations"
+  ],
+  "funcs": [
+   "operations"
+  ],
+  "work_hq": "+917676777222",
+  "already_contact": false
+ },
+ {
+  "id": "63a2fd1118fdf00001647eff",
+  "name": "Shankar Kkrishnamurthy",
+  "title": "General Manager",
+  "headline": "General Manager at Addressmaker",
+  "email": "shankar@addressmaker.in",
+  "email_status": "verified",
+  "extrapolated": null,
+  "org": "Address Maker",
+  "domain": "addressmaker.in",
+  "industry": "real estate",
+  "industries": [
+   "real estate",
+   "construction"
+  ],
+  "emp": 86,
+  "seniority": "manager",
+  "depts": [],
+  "funcs": [],
+  "work_hq": "+918049350000",
+  "already_contact": false
+ },
+ {
+  "id": "6647199156262d0001a36bf5",
+  "name": "Nimai Kannugo",
+  "title": "Deputy General Manager",
+  "headline": "Results-Driven Civil Engineer | Project Management Expert | Driving Successful Construction Operations",
+  "email": "nimai@valmark.in",
+  "email_status": "verified",
+  "extrapolated": null,
+  "org": "Valmark",
+  "domain": "valmark.in",
+  "industry": "real estate",
+  "industries": [
+   "real estate",
+   "construction"
+  ],
+  "emp": 79,
+  "seniority": "manager",
+  "depts": [
+   "operations"
+  ],
+  "funcs": [
+   "operations"
+  ],
+  "work_hq": "+918041477330",
+  "already_contact": false
+ },
+ {
+  "id": "54aa9c3c7468690b75030f0e",
+  "name": "Virupakshayya Kempayyamath",
+  "title": "Sr. General Manager QA / QC",
+  "headline": "GM Quality at BSRIIL",
+  "email": "virupakshayyak@bsriil.com",
+  "email_status": "verified",
+  "extrapolated": null,
+  "org": "BSR Infratech India Ltd",
+  "domain": null,
+  "industry": "construction",
+  "industries": [
+   "construction",
+   "civil engineering"
+  ],
+  "emp": 120,
+  "seniority": "manager",
+  "depts": [
+   "engineering_technical",
+   "test_quality_assurance",
+   "quality_assurance",
+   "quality_management"
+  ],
+  "funcs": [
+   "engineering"
+  ],
+  "work_hq": null,
+  "already_contact": false
+ },
+ {
+  "id": "5e8699f1f9f4f700011accf4",
+  "name": "Saikrishna Ramireddy",
+  "title": "Chief Operations Officer (COO)",
+  "headline": "Chief Operations Officer",
+  "email": "saikrishna.ramireddy@trifectaprojects.com",
+  "email_status": "verified",
+  "extrapolated": null,
+  "org": "Trifecta Projects",
+  "domain": "trifectaprojects.com",
+  "industry": "real estate",
+  "industries": [
+   "real estate",
+   "construction"
+  ],
+  "emp": 200,
+  "seniority": "c_suite",
+  "depts": [
+   "operations_executive",
+   "business_service_management_itsm",
+   "operations"
+  ],
+  "funcs": [
+   "operations"
+  ],
+  "work_hq": "+918088004488",
+  "already_contact": false
+ },
+ {
+  "id": "57df4fdca6da980b53df66ef",
+  "name": "Pavithran Chandrasekaran",
+  "title": "Assistant General Manager",
+  "headline": "Project Management Professional - Real Estate",
+  "email": "pavithran@addressmaker.in",
+  "email_status": "verified",
+  "extrapolated": null,
+  "org": "Address Maker",
+  "domain": "addressmaker.in",
+  "industry": "real estate",
+  "industries": [
+   "real estate",
+   "construction"
+  ],
+  "emp": 86,
+  "seniority": "manager",
+  "depts": [
+   "operations"
+  ],
+  "funcs": [
+   "operations"
+  ],
+  "work_hq": "+918049350000",
+  "already_contact": false
+ },
+ {
+  "id": "54a2f493746869382555c249",
+  "name": "Mridul Naidu",
+  "title": "Assistant General Manager - Project Planning and Controls",
+  "headline": "AGM -Project Planning & Controls",
+  "email": "mriduln@maiaestates.in",
+  "email_status": "verified",
+  "extrapolated": null,
+  "org": "MAIA Estates",
+  "domain": "maiaestates.in",
+  "industry": "real estate",
+  "industries": [
+   "real estate"
+  ],
+  "emp": 180,
+  "seniority": "manager",
+  "depts": [],
+  "funcs": [],
+  "work_hq": "+918041219231",
+  "already_contact": false
+ },
+ {
+  "id": "54a43ad77468692fa28cea36",
+  "name": "Nagaraj Patil",
+  "title": "Deputy General Manager Contracts and Procurement",
+  "headline": "A results-oriented Civil Engineering professional with\u00a021+ years of expertise\u00a0in end-to-end Project Lifecycle Management. Proven track record in headi",
+  "email": "nagaraj.h@cornerstoneindia.in",
+  "email_status": "verified",
+  "extrapolated": null,
+  "org": "Cornerstone Properties Private Limited",
+  "domain": "cornerstoneindia.in",
+  "industry": "real estate",
+  "industries": [
+   "real estate",
+   "commercial real estate"
+  ],
+  "emp": 63,
+  "seniority": "manager",
+  "depts": [
+   "sourcing_procurement",
+   "contracts"
+  ],
+  "funcs": [
+   "finance"
+  ],
+  "work_hq": "+918043335999",
+  "already_contact": false
+ },
+ {
+  "id": "5ab36e4ea6da9870527c8a93",
+  "name": "Sarath M",
+  "title": "Senior General Manager - Head Project Management",
+  "headline": "Sr. General Manager & Head - Project Management (PMO) | IIM-I | PMEC\u2122",
+  "email": "sarath@manyata.co.in",
+  "email_status": "verified",
+  "extrapolated": null,
+  "org": "Manyata Developers Pvt. Ltd",
+  "domain": "manyata.co.in",
+  "industry": "real estate",
+  "industries": [
+   "real estate",
+   "commercial real estate"
+  ],
+  "emp": 47,
+  "seniority": "head",
+  "depts": [
+   "project_management",
+   "project_program_management"
+  ],
+  "funcs": [],
+  "work_hq": "+919900731731",
+  "already_contact": false
+ },
+ {
+  "id": "6422d1ad04b9c60001c9ed1c",
+  "name": "Ranadeep Dhar",
+  "title": "Assistant General Manager - Environment, Health & Safety",
+  "headline": "An goal-oriented professional having 19+ years of extensive experience in Environment, Health & Safety Management System (EHS-MS), Legal & other Compl",
+  "email": "ranadeepd@maiaestates.in",
+  "email_status": "verified",
+  "extrapolated": null,
+  "org": "MAIA Estates",
+  "domain": "maiaestates.in",
+  "industry": "real estate",
+  "industries": [
+   "real estate"
+  ],
+  "emp": 180,
+  "seniority": "manager",
+  "depts": [
+   "safety"
+  ],
+  "funcs": [],
+  "work_hq": "+918041219231",
+  "already_contact": false
+ },
+ {
+  "id": "54a45c6774686932099cac41",
+  "name": "Rajadurai Natarajan",
+  "title": "General Manager - EHS & Audit",
+  "headline": "Head - EHS & Audit",
+  "email": "rajadurai@manyata.co.in",
+  "email_status": "verified",
+  "extrapolated": null,
+  "org": "Manyata Developers Pvt. Ltd",
+  "domain": "manyata.co.in",
+  "industry": "real estate",
+  "industries": [
+   "real estate",
+   "commercial real estate"
+  ],
+  "emp": 47,
+  "seniority": "manager",
+  "depts": [
+   "internal_audit_control",
+   "health_safety"
+  ],
+  "funcs": [],
+  "work_hq": "+919900731731",
+  "already_contact": false
+ },
+ {
+  "id": "6863a262ee21d200012a04d6",
+  "name": "Sandeep Cheenappa",
+  "title": "Head of Projects & Services",
+  "headline": "Head of Projects & Services at Syncro Industries",
+  "email": "sandeep.c@syncrosystems.co.in",
+  "email_status": "verified",
+  "extrapolated": null,
+  "org": "Syncro",
+  "domain": "syncrosystems.co.in",
+  "industry": "machinery",
+  "industries": [
+   "machinery",
+   "facilities services"
+  ],
+  "emp": 51,
+  "seniority": "head",
+  "depts": [],
+  "funcs": [],
+  "work_hq": "+9118005729844",
+  "already_contact": false
+ },
+ {
+  "id": "5f6d6550c4128b0001bad114",
+  "name": "Varun K",
+  "title": "Co-Founder/Chief Operating Officer",
+  "headline": "Co-Founder/Chief Operating Officer at G5 Engineering Solutions Private Limited",
+  "email": "varun@g5engineerings.com",
+  "email_status": "verified",
+  "extrapolated": null,
+  "org": "G5 Engineering Solutions Private Limited",
+  "domain": "g5engineerings.com",
+  "industry": "construction",
+  "industries": [
+   "construction",
+   "civil engineering"
+  ],
+  "emp": 53,
+  "seniority": "founder",
+  "depts": [
+   "founder",
+   "operations_executive",
+   "business_service_management_itsm",
+   "operations"
+  ],
+  "funcs": [
+   "operations",
+   "entrepreneurship"
+  ],
+  "work_hq": "+918197556335",
+  "already_contact": false
+ },
+ {
+  "id": "6317a89dfa9dbb0001492c3e",
+  "name": "Jayaprakash M",
+  "title": "General Manager",
+  "headline": "space theory solutions",
+  "email": "jayaprakash@spacetheorysolutions.com",
+  "email_status": "verified",
+  "extrapolated": null,
+  "org": "SpaceTheory Solutions Pvt. Ltd.",
+  "domain": "spacetheorysolutions.com",
+  "industry": "construction",
+  "industries": [
+   "construction",
+   "architecture & planning"
+  ],
+  "emp": 64,
+  "seniority": "manager",
+  "depts": [],
+  "funcs": [],
+  "work_hq": "+919880595005",
+  "already_contact": false
+ },
+ {
+  "id": "67d7115fc24a36000122b34c",
+  "name": "Rajeshwari G",
+  "title": "AVP",
+  "headline": "AVP - Pre sales",
+  "email": "rajeshwari@houzbay.com",
+  "email_status": "verified",
+  "extrapolated": null,
+  "org": "HOUZBAY",
+  "domain": "houzbay.com",
+  "industry": "real estate",
+  "industries": [
+   "real estate",
+   "marketing & advertising"
+  ],
+  "emp": 130,
+  "seniority": "vp",
+  "depts": [],
+  "funcs": [],
+  "work_hq": "+918088359445",
+  "already_contact": false
+ },
+ {
+  "id": "60d3d8c474f1170001c3045e",
+  "name": "Manish K",
+  "title": "Deputy General Manager",
+  "headline": "DGM - Project Head at HOUZBAY .",
+  "email": "manish@houzbay.com",
+  "email_status": "verified",
+  "extrapolated": null,
+  "org": "HOUZBAY",
+  "domain": "houzbay.com",
+  "industry": "real estate",
+  "industries": [
+   "real estate",
+   "marketing & advertising"
+  ],
+  "emp": 130,
+  "seniority": "manager",
+  "depts": [
+   "operations"
+  ],
+  "funcs": [
+   "operations"
+  ],
+  "work_hq": "+918088359445",
+  "already_contact": false
+ },
+ {
+  "id": "5f5c9a95c2a8ea0001aeed6b",
+  "name": "Joyner Massey",
+  "title": "Assistant General Manager",
+  "headline": "AGM| Brand Growth & Revenue Strategy | Driving Luxury & NRI Sales & Strategic Marketing",
+  "email": "joyner@myspacerealty.com",
+  "email_status": "verified",
+  "extrapolated": null,
+  "org": "MySpace Realty",
+  "domain": "myspacerealty.com",
+  "industry": "real estate",
+  "industries": [
+   "real estate",
+   "commercial real estate"
+  ],
+  "emp": 55,
+  "seniority": "manager",
+  "depts": [
+   "operations"
+  ],
+  "funcs": [
+   "operations"
+  ],
+  "work_hq": "+919238123456",
+  "already_contact": false
+ },
+ {
+  "id": "5fd1c8043d18f400015a3449",
+  "name": "Naveen Naveen",
+  "title": "Deputy General Manager Projects",
+  "headline": "Deputy General Manager - Projects at DNR Corp",
+  "email": "naveen@dnrgroup.in",
+  "email_status": "verified",
+  "extrapolated": null,
+  "org": "DNR Corporation",
+  "domain": "dnrgroup.in",
+  "industry": "real estate",
+  "industries": [
+   "real estate",
+   "construction"
+  ],
+  "emp": 38,
+  "seniority": "manager",
+  "depts": [
+   "project_development",
+   "project_management"
+  ],
+  "funcs": [],
+  "work_hq": null,
+  "already_contact": false
+ },
+ {
+  "id": "6532b451a4603c000168fbfd",
+  "name": "Diwakar S",
+  "title": "Chief Operating Officer",
+  "headline": "Chief Operating Officer",
+  "email": "diwakar@om-tec.in",
+  "email_status": "verified",
+  "extrapolated": null,
+  "org": "Omtec Engineering & Constructions Pvt. Ltd",
+  "domain": "omtecgroup.com",
+  "industry": "construction",
+  "industries": [
+   "construction",
+   "civil engineering",
+   "mechanical or industrial engineering"
+  ],
+  "emp": 50,
+  "seniority": "c_suite",
+  "depts": [
+   "operations_executive",
+   "business_service_management_itsm",
+   "operations"
+  ],
+  "funcs": [
+   "operations"
+  ],
+  "work_hq": "+919900091788",
+  "already_contact": false
+ },
+ {
+  "id": "6127755b54cc6f00012e9a41",
+  "name": "Fheroz Ismail",
+  "title": "Vice President - Tendering, Procurement & Billing",
+  "headline": "Vice President - Tendering, Procurement & Billing at SpaceTheory Solutions Pvt. Ltd.",
+  "email": "fheroz@spacetheorysolutions.com",
+  "email_status": "verified",
+  "extrapolated": null,
+  "org": "SpaceTheory Solutions Pvt. Ltd.",
+  "domain": "spacetheorysolutions.com",
+  "industry": "construction",
+  "industries": [
+   "construction",
+   "architecture & planning"
+  ],
+  "emp": 64,
+  "seniority": "vp",
+  "depts": [
+   "sourcing_procurement"
+  ],
+  "funcs": [
+   "finance"
+  ],
+  "work_hq": "+919880595005",
+  "already_contact": false
+ },
+ {
+  "id": "5b39cb0ca6da9854f2e22282",
+  "name": "Chetan Ci",
+  "title": "Chief Operating Officer",
+  "headline": "COO, White Lotus | Building India\u2019s Trust in Real Estate",
+  "email": "chetan@whitelotusgroup.in",
+  "email_status": "verified",
+  "extrapolated": null,
+  "org": "White Lotus Group",
+  "domain": "whitelotusgroup.in",
+  "industry": "real estate",
+  "industries": [
+   "real estate",
+   "commercial real estate",
+   "architecture & planning"
+  ],
+  "emp": 33,
+  "seniority": "c_suite",
+  "depts": [
+   "operations_executive",
+   "business_service_management_itsm",
+   "operations"
+  ],
+  "funcs": [
+   "operations"
+  ],
+  "work_hq": "+919538338888",
+  "already_contact": false
+ },
+ {
+  "id": "649c0c97c2634500017dfe24",
+  "name": "Karthikeyan D",
+  "title": "General Manager - MEP Services",
+  "headline": "General Manager - MEP",
+  "email": "karthikeyan@manyata.co.in",
+  "email_status": "verified",
+  "extrapolated": null,
+  "org": "Manyata Developers Pvt. Ltd",
+  "domain": "manyata.co.in",
+  "industry": "real estate",
+  "industries": [
+   "real estate",
+   "commercial real estate"
+  ],
+  "emp": 47,
+  "seniority": "manager",
+  "depts": [],
+  "funcs": [],
+  "work_hq": "+919900731731",
+  "already_contact": false
+ },
+ {
+  "id": "5c5fca2f80f93eddc113b45a",
+  "name": "Azhar Ahmed",
+  "title": "Assistant General Manager - Project Operations",
+  "headline": "Civil Engineer at VBHC Pvt. Ltd.",
+  "email": "azhar.ahmed@vbhc.com",
+  "email_status": "verified",
+  "extrapolated": null,
+  "org": "VBHC",
+  "domain": "vbhc.com",
+  "industry": "real estate",
+  "industries": [
+   "real estate"
+  ],
+  "emp": 200,
+  "seniority": "manager",
+  "depts": [
+   "operations"
+  ],
+  "funcs": [
+   "operations"
+  ],
+  "work_hq": "+918043479500",
+  "already_contact": false
+ },
+ {
+  "id": "649db7aab989e5000163a300",
+  "name": "Pururav Nag",
+  "title": "Deputy General Manager Operations",
+  "headline": "Deputy general manager ( Operations )",
+  "email": "pururav@sizzleproperties.com",
+  "email_status": "verified",
+  "extrapolated": null,
+  "org": "Sizzle Properties Pvt Ltd.",
+  "domain": "sizzleproperties.com",
+  "industry": "real estate",
+  "industries": [
+   "real estate"
+  ],
+  "emp": 82,
+  "seniority": "manager",
+  "depts": [
+   "operations"
+  ],
+  "funcs": [
+   "operations"
+  ],
+  "work_hq": "+917411554415",
+  "already_contact": false
+ },
+ {
+  "id": "66113d8965f6410007679438",
+  "name": "Ravi G",
+  "title": "Head - Procurement & Planning",
+  "headline": "EPC jobs in High Pressure High Temperature Cooling Water / Helium Systems. Hydrogen Fuel Filling Systems.",
+  "email": "gr@vertexengineers.in",
+  "email_status": "verified",
+  "extrapolated": null,
+  "org": "Vertex Engineers Pvt. Ltd.",
+  "domain": "vertexengineers.in",
+  "industry": "civil engineering",
+  "industries": [
+   "civil engineering",
+   "construction",
+   "mechanical or industrial engineering"
+  ],
+  "emp": 35,
+  "seniority": "head",
+  "depts": [
+   "sourcing_procurement"
+  ],
+  "funcs": [
+   "finance"
+  ],
+  "work_hq": "+918026650684",
+  "already_contact": false
+ },
+ {
+  "id": "68334d312711ce00016b6a16",
+  "name": "Sudhama V",
+  "title": "Vice President",
+  "headline": "Vice President at Renaissance Holdings & Developers (P) Ltd",
+  "email": "sudhama@renaissanceholdings.com",
+  "email_status": "verified",
+  "extrapolated": null,
+  "org": "Renaissance Holdings & Developers (P) Ltd",
+  "domain": "renaissanceholdings.com",
+  "industry": "real estate",
+  "industries": [
+   "real estate",
+   "commercial real estate"
+  ],
+  "emp": 51,
+  "seniority": "vp",
+  "depts": [],
+  "funcs": [],
+  "work_hq": "+918042417000",
+  "already_contact": false
+ },
+ {
+  "id": "6119ec4ebcdcde0001efaa6b",
+  "name": "Giridhar Yelchuru",
+  "title": "Vice President",
+  "headline": "Vice President at Total Environment",
+  "email": "giridhar.yelchuru@total-environment.com",
+  "email_status": "verified",
+  "extrapolated": null,
+  "org": "Total Environment",
+  "domain": "thetotalenvironment.co.in",
+  "industry": "real estate",
+  "industries": [
+   "real estate",
+   "construction",
+   "architecture & planning"
+  ],
+  "emp": 42,
+  "seniority": "vp",
+  "depts": [],
+  "funcs": [],
+  "work_hq": "+918095681234",
+  "already_contact": false
+ }
+]

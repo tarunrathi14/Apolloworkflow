@@ -198,8 +198,10 @@ then `apollo_emailer_campaigns_add_contact_ids` with `status: "active"` and
 `sequence_same_company_in_same_campaign: true` (many of these firms yield 2–4 contacts each).
 
 ### 6. Update state and commit
-Advance `search_c_directors_25_200.next_search_page`, append to its `pages_used`, record the
-page's yield in `yield_by_page`, update `last_run_date` and `last_run_outcome` in
+Advance **the active search's** `next_search_page` (read `active_search` from
+`data/run_state.json` — do **not** hardcode a search key here; this step used to name
+`search_c_directors_25_200` long after Search D became active), append to its `pages_used`,
+record the page's yield in `yield_by_page`, update `last_run_date` and `last_run_outcome` in
 `data/run_state.json`, then commit and push to `claude/monday-outbound-workflow-eops28`.
 
 Quality degrades by page within a search. Search A: page 1 ~85% relevant, page 3 ~35%, page 4 ~10%.
@@ -219,6 +221,53 @@ Keep it short and factual:
 - **Credits consumed and remaining**
 - Sequence state (paused or active) and the reminder that nothing was enrolled
 - Anything that needs a decision
+
+---
+
+---
+
+## Lessons added 2026-10-07 (week 11)
+
+1. **Read the direct-dial balance from the Profile endpoint, not the credit-stats endpoint.**
+   `apollo_usage_stats_credit_usage_stats` returns `direct_dial_credit` with **only
+   `consumed`** — no `limit`, no `left_over`. The runbook's old instruction to check
+   `direct_dial_credit.left_over` can therefore never succeed, and reads as "no credits".
+   Use `apollo_users_api_profile` with `include_credit_usage: true` and compute
+   `effective_num_direct_dial_credits - num_direct_dial_credits_used`. On 2026-10-07 that was
+   **2500 − 112 = 2,388 available**, while the stats endpoint looked like zero.
+
+2. **Persisted tool-result files use two different names AND two different formats.** Large
+   responses land in `/root/.claude/projects/-home-user/<session>/tool-results/` as either
+   `mcp-Apollo_io-<tool>-<epoch>.txt` (bare JSON) **or** `toolu_<id>.json` (wrapped as
+   `[{"type":"text","text":"<json string>"}]`). A glob for one pattern silently loses whole
+   batches. Glob the directory, then try bare `json.loads` and fall back to unwrapping.
+
+3. **`apollo_contacts_bulk_create` returns `created_contacts` and `existing_contacts`** — not
+   `contacts` or `new_contacts`. Parsing for the wrong key reports zero saved on a successful
+   call. `existing_contacts` is the real net-new answer: 5 of 24 builders this week were
+   already contacts despite passing the person_id check, as lesson 2 in HANDOVER predicts.
+
+4. **A list's `cached_count` is lazily recomputed and will lie right after an add.** The
+   fitout list echoed `cached_count: 4` immediately after 5 records were added, with
+   `need_cached_count_update: true` and `needs_count_update_at` stamped to the add. Verify
+   membership with `apollo_contacts_search` + `contact_label_ids` (it showed `total_entries: 9`),
+   not the echoed count.
+
+5. **Enrolments on the unlinked `taarun@stscl.co.in` mailbox are dead.** Harini V's campaign
+   status reads `status: "failed"`, `inactive_reason: "User deleted"`,
+   `failure_reason: "user_deleted"` against account `695f80e766efc30021e74213`. Any historical
+   enrolment sent from that mailbox is worth auditing before counting it as live outreach.
+
+6. **The enriched `headline` keeps earning its keep — 8 of 37 dropped on it this week.**
+   Caught: "AVP - **Pre sales**" at a developer; an AGM whose headline was "Brand Growth &
+   Revenue Strategy | ... Sales & Strategic Marketing"; and a "Head - Procurement & Planning"
+   at Vertex Engineers whose headline is "**EPC jobs in High Pressure High Temperature Cooling
+   Water / Helium Systems. Hydrogen Fuel Filling Systems**" — industrial process EPC, which
+   does not buy slab rebar. Also dropped two EHS/safety roles and one `machinery` industry.
+
+7. **The Apollo MCP connector flapped three times mid-run** (disconnect → reconnect), and it
+   came back under a **different tool prefix** (`mcp__Apollo_io__*` rather than the opaque
+   server-id prefix). Re-resolve tool names after a reconnect; schemas must be re-loaded.
 
 ---
 

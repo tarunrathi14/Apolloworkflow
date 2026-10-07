@@ -1,7 +1,7 @@
 {
   "_comment": "Mutable state for the weekly Apollo outbound run. Each run reads this, then commits an updated copy back to the branch so the next fresh session picks up where this one left off.",
 
-  "_searches": "Search D (senior operations/projects titles at 25-200 employee construction firms) opened 2026-09-21 and is now the active seam - it reaches the actual buying centre (VP-Projects, GM-Projects, GM-Construction, GM-MEP, DGM-Procurement) rather than founders. Pool 513, page 1 yielded 40 saved. Search C is worked out at page 3.",
+  "_searches": "Search D (senior operations/projects titles at 25-200 employee construction firms) opened 2026-09-21 and remains the active seam. Page 1 yielded 40 saved; page 2 yielded 19 net-new builders of 100 (24 qualified, 5 of those already contacts) plus 4 net-new fitout. Pool reported 489 on page 2 (was 513). Search C is worked out at page 3.",
 
   "search_a_procurement_titles": {
     "status": "exhausted",
@@ -25,21 +25,32 @@
     "yield_by_page": { "1": "53 of 100", "2": "22 of 100", "3": "8 of 100" }
   },
   "search_d_senior_ops_25_200": {
-    "status": "active - best performing",
+    "status": "active - still the best seam, but thinning",
     "note": "person_titles vice president/general manager/chief operating officer/head of projects/project director/vp projects/head of procurement/purchase head/senior general manager/assistant general manager, include_similar_titles false, org employees 25-200, construction-only keyword tags. See RUNBOOK.md section 1.",
-    "total_pool": 513,
-    "pages_used": [1],
-    "next_search_page": 2,
-    "yield_by_page": { "1": "40 saved of 100 (combined with C p3)" }
+    "total_pool": 489,
+    "pages_used": [1, 2],
+    "next_search_page": 3,
+    "yield_by_page": {
+      "1": "40 saved of 100 (combined with C p3)",
+      "2": "19 net-new builders saved of 100 (24 passed all four filters; 5 of those were already contacts). Plus 4 net-new fitout. 8 dropped on the enriched-headline/industry check."
+    }
   },
 
-  "next_search_page": 2,
+  "next_search_page": 3,
   "active_search": "search_d_senior_ops_25_200",
-  "last_run_date": "2026-09-21",
-  "last_run_outcome": "40 saved, 39 ENROLLED active (1 blocked as finished-in-other-campaign); 49 lead credits; 31 of 38 new records carry a company switchboard number",
+  "last_run_date": "2026-10-07",
+  "last_run_outcome": "Week 11 (ran 2026-10-07, delayed from the 2026-10-05 firing by repeated Apollo connector dropouts). 19 net-new builders + 4 net-new fitout saved and labelled. 37 lead credits. NOTHING ENROLLED - no human approval present in the run, per the RUNBOOK section 5 gate. Direct dials have REFILLED (2,388 available) - awaiting Taarun's go-ahead on a bulk reveal.",
   "sequence_state": "ACTIVE - 4 steps, LinkedIn + 3 calls, no email steps",
-  "sequence_overdue_tasks_at_run": 22,
-  "direct_dial_credits_exhausted": true,
-  "credit_cycle_resets": "2026-09-26",
-  "phones_still_needed_for": 149
+  "direct_dial_credits_exhausted": false,
+  "direct_dial_credits_available": 2388,
+  "direct_dial_note": "Cycle reset 2026-09-26 refilled the pool to 2,500; 112 already consumed by something outside this project. apollo_usage_stats_credit_usage_stats omits limit/left_over for this pool - read effective_num_direct_dial_credits and num_direct_dial_credits_used from apollo_users_api_profile instead.",
+  "lead_credits_available": 2391,
+  "credit_cycle_resets": "2026-10-26",
+  "phones_still_needed_for": 149,
+  "phones_pending_decision": "149 enrolled contacts have no direct number, plus the 23 banked this week. A bulk reveal is ~8 credits each (~1,192 for the 149) and needs Taarun's explicit approval.",
+  "open_flags": [
+    "Enrolments made through the old taarun@stscl.co.in mailbox (695f80e766efc30021e74213) show status=failed / failure_reason=user_deleted - e.g. Harini V. Historical enrolments on that mailbox may be dead and worth auditing.",
+    "Harini V (fitout) was sitting on 'Builders in Bengaluru' and had been enrolled; she is now also on the fitout list. Not removed from the builders list - that is Taarun's call.",
+    "HOUZBAY enriches as real estate + marketing & advertising. Manish K (DGM - Project Head) was kept; Rajeshwari G (AVP - Pre sales) was dropped. Confirm whether HOUZBAY actually builds."
+  ]
 }
